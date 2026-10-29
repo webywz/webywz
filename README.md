@@ -15,7 +15,7 @@
 
 ---
 
-白天写网关和桌面工具，晚上让贡献图游进水族馆。不堆栈，不堆徽章——只把真正想给人用的东西放在第一屏。
+白天写网关和桌面工具，晚上让贡献图游进水族馆。commit、PR、prompt 也做成能直接用的 CLI。不堆栈，不堆徽章——只把真正想给人用的东西放在第一屏。
 
 ## 🐠 贡献水族箱
 
@@ -47,6 +47,26 @@
 一条命令，写出有品味的 conventional commit。提交信息也可以有性格。
 
 [打开 CLI](https://github.com/webywz/vibe-commit)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🔀 [diff-vibe](https://github.com/webywz/diff-vibe)
+
+git diff 直接变成可贴的 PR title 和 body。离线启发式先出草稿，有 Key 再可选 AI。
+
+[打开 CLI](https://github.com/webywz/diff-vibe)
+
+</td>
+<td width="50%" valign="top">
+
+### ⚖️ [prompt-diff](https://github.com/webywz/prompt-diff)
+
+像 diff 代码一样对比两份 LLM prompt：意图漂移、token、回归风险分。改完先看一眼。
+
+[打开 CLI](https://github.com/webywz/prompt-diff)
 
 </td>
 </tr>
@@ -123,8 +143,8 @@ Vue 响应式原理的分阶段实现
 
 - 🔭 把 AI 嵌进真实工作流，而不是演示幻灯片
 - 🛠️ 后端、桌面端、自动化：接口要干净，工具要好用
-- ✍️ 在意提交信息、README 的第一眼，以及会呼吸的细节
-- 🌊 正在打磨：水族馆、vibe-commit，还有这座自己会更新的主页
+- ✍️ 在意提交信息、prompt 的回归风险，以及会呼吸的细节
+- 🌊 正在打磨：水族馆、一套离线优先的 CLI；prompt 写飘了就丢给 [llm-roast](https://github.com/webywz/llm-roast)
 
 ## 📊 GitHub 统计
 
@@ -159,6 +179,6 @@ Vue 响应式原理的分阶段实现
 
 <div align="center">
 
-有意思的话，去 [水族馆](https://github.com/webywz/contrib-aquarium) 看贡献游泳，或用 [vibe-commit](https://github.com/webywz/vibe-commit) 写下一条提交。
+有意思的话，去 [水族馆](https://github.com/webywz/contrib-aquarium) 看贡献游泳；commit 用 [vibe-commit](https://github.com/webywz/vibe-commit)，PR 用 [diff-vibe](https://github.com/webywz/diff-vibe)。
 
 </div>

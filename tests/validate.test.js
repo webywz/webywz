@@ -142,6 +142,29 @@ function testReadmeStructure() {
     readme.includes('https://github.com/webywz/vibe-commit'),
     'README 链接 vibe-commit Demo'
   );
+
+  const highlightHeading = readme.indexOf('## ✨ 亮点 Demo');
+  const projectsStart = readme.indexOf('<!--PROJECTS:START-->');
+  assert(highlightHeading !== -1, 'README 包含手写「亮点 Demo」标题');
+  assert(
+    highlightHeading !== -1 && projectsStart !== -1 && highlightHeading < projectsStart,
+    '亮点 Demo 出现在 PROJECTS 标记之前'
+  );
+  const highlightSection =
+    highlightHeading !== -1 && projectsStart !== -1
+      ? readme.slice(highlightHeading, projectsStart)
+      : '';
+  for (const name of ['contrib-aquarium', 'vibe-commit', 'diff-vibe', 'prompt-diff']) {
+    assert(
+      highlightSection.includes(`https://github.com/webywz/${name}`),
+      `亮点 Demo 包含 ${name}`
+    );
+  }
+  assert(highlightSection.includes('<table>'), '亮点 Demo 使用双列表格卡片');
+  assert(
+    (highlightSection.match(/<tr>/g) || []).length >= 2,
+    '亮点 Demo 至少两行（2×2）'
+  );
   assert(readme.includes('theme=tokyonight'), '统计卡片使用 tokyonight 主题');
   assert(readme.includes('assets/banner.svg'), 'README 包含自定义横幅');
   assert(readme.includes('assets/stats.svg'), 'README 使用本地 stats SVG');
