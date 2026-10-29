@@ -1,0 +1,56 @@
+name: Daily Profile Refresh
+
+on:
+  schedule:
+    # 每天 UTC 16:00 运行（上海时间 00:00）
+    - cron: '0 16 * * *'
+  workflow_dispatch:
+    # 允许手动触发
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: 🔧 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: 🧪 Run tests
+        run: npm test
+      
+      - name: 🔄 Refresh profile data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run refresh
+      
+      - name: 📝 Check for changes
+        id: check_changes
+        run: |
+          git diff --quiet README.md data/profile.json || echo "changed=true" >> $GITHUB_OUTPUT
+      
+      - name: 💾 Commit and push if changed
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add README.md data/profile.json
+          git commit -m "🤖 自动更新 Profile 数据 $(TZ=Asia/Shanghai date '+%Y-%m-%d %H:%M:%S')"
+          git push
+      
+      - name: ✅ Done
+        if: steps.check_changes.outputs.changed == 'true'
+        run: echo "✨ Profile 已成功更新！"
+      
+      - name: ℹ️ No changes
+        if: steps.check_changes.outputs.changed != 'true'
+        run: echo "ℹ️ 没有检测到变化，跳过提交"
