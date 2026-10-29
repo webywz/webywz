@@ -1,0 +1,20 @@
+{
+  "name": "webywz-profile",
+  "version": "1.0.0",
+  "description": "Living GitHub profile README for webywz",
+  "type": "module",
+  "scripts": {
+    "refresh": "node scripts/refresh.js",
+    "test": "node tests/validate.test.js",
+    "test:all": "npm test"
+  },
+  "keywords": [
+    "github-profile",
+    "readme",
+    "automation"
+  ],
+  "author": "webywz",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
