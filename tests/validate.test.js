@@ -146,6 +146,17 @@ function testReadmeStructure() {
   assert(readme.includes('assets/banner.svg'), 'README 包含自定义横幅');
   assert(readme.includes('assets/stats.svg'), 'README 使用本地 stats SVG');
   assert(readme.includes('assets/langs.svg'), 'README 使用本地 langs SVG');
+  assert(readme.includes('assets/aquarium.svg'), 'README 嵌入本地贡献水族箱 SVG');
+  assert(
+    readme.includes('贡献水族箱') || readme.includes('水族馆'),
+    'README 用中文说明水族箱'
+  );
+  const bannerIdx = readme.indexOf('assets/banner.svg');
+  const aquariumIdx = readme.indexOf('assets/aquarium.svg');
+  const projectsIdx = readme.indexOf('<!--PROJECTS:START-->');
+  assert(bannerIdx !== -1 && aquariumIdx !== -1, '横幅与水族箱路径都存在');
+  assert(bannerIdx < aquariumIdx, '水族箱出现在横幅之后');
+  assert(aquariumIdx < projectsIdx, '水族箱出现在精选项目之前');
   assert(!readme.includes('badge/-TypeScript'), 'README 不再是技术栈徽章墙');
   assert(!readme.includes('github-readme-stats.vercel.app'), '不依赖已暂停的 vercel stats 部署');
 }
@@ -287,6 +298,16 @@ function testGeneratedSvgs() {
   const statsPath = join(ROOT_DIR, 'assets', 'stats.svg');
   const langsPath = join(ROOT_DIR, 'assets', 'langs.svg');
   const bannerPath = join(ROOT_DIR, 'assets', 'banner.svg');
+  const aquariumPath = join(ROOT_DIR, 'assets', 'aquarium.svg');
+  assert(existsSync(aquariumPath), 'aquarium.svg 存在');
+  const aquarium = readFileSync(aquariumPath, 'utf-8');
+  assert(aquarium.includes('<svg'), 'aquarium.svg 是 SVG');
+  assert(
+    aquarium.includes('webywz') || aquarium.includes('WEBYWZ'),
+    'aquarium.svg 绑定用户 webywz'
+  );
+  assert(aquarium.includes('contribution'), 'aquarium.svg 来自贡献日历');
+
   assert(existsSync(bannerPath), 'banner.svg 存在');
   const banner = readFileSync(bannerPath);
   let bannerText = '';
@@ -332,6 +353,19 @@ function testWorkflowIntact() {
   assert(workflow.includes('npm test'), '刷新前仍先跑测试');
   assert(workflow.includes('npm run refresh'), '仍调用 refresh 脚本');
   assert(workflow.includes('contents: write'), '仍有写权限');
+  assert(
+    workflow.includes('webywz/contrib-aquarium@main'),
+    '使用 contrib-aquarium 官方 Action 重画鱼缸'
+  );
+  assert(workflow.includes('out: assets/aquarium.svg'), '水族箱输出到 assets/aquarium.svg');
+  assert(
+    workflow.includes('assets/aquarium.svg'),
+    '变更检测 / 提交包含 aquarium.svg'
+  );
+  assert(
+    workflow.includes('secrets.GITHUB_TOKEN'),
+    '使用 Actions 自带 GITHUB_TOKEN，无需额外 secrets'
+  );
 }
 
 function testReadmeRefreshPreservesCopy() {
@@ -340,6 +374,8 @@ function testReadmeRefreshPreservesCopy() {
   const template = `# 手写标题
 
 关于我：请保留
+
+<img src="assets/aquarium.svg" alt="aquarium" />
 
 <!--PROJECTS:START-->
 old projects
@@ -369,6 +405,7 @@ old time
   );
 
   assert(next.includes('关于我：请保留'), '标记外的介绍不会被覆盖');
+  assert(next.includes('assets/aquarium.svg'), '刷新后仍保留水族箱嵌入');
   assert(next.includes('breathing-github-profile'), '刷新后仍保留生成器链接');
   assert(!next.includes('old projects'), 'PROJECTS 标记内会被替换');
   assert(next.includes('contrib-aquarium'), '刷新后写入 showcase 项目');
