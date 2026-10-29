@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="195" viewBox="0 0 460 195" role="img" aria-label="GitHub Stats">
+  <rect width="460" height="195" rx="16" fill="#1a1b26"/>
+  <text x="24" y="36" fill="#7aa2f7" font-size="16" font-weight="700" font-family="Verdana, Geneva, sans-serif">webywz 的 GitHub 统计</text>
+  <text x="24" y="56" fill="#565f89" font-size="11" font-family="Verdana, Geneva, sans-serif">theme · tokyonight</text>
+  <circle cx="36" cy="72" r="5" fill="#7aa2f7"/>
+  <text x="52" y="78" fill="#c0caf5" font-size="15" font-family="Verdana, Geneva, sans-serif">公开仓库</text>
+  <text x="430" y="78" text-anchor="end" fill="#7aa2f7" font-size="16" font-weight="700" font-family="Verdana, Geneva, sans-serif">20</text>
+  <circle cx="36" cy="100" r="5" fill="#7dcfff"/>
+  <text x="52" y="106" fill="#c0caf5" font-size="15" font-family="Verdana, Geneva, sans-serif">Stars</text>
+  <text x="430" y="106" text-anchor="end" fill="#7dcfff" font-size="16" font-weight="700" font-family="Verdana, Geneva, sans-serif">7</text>
+  <circle cx="36" cy="128" r="5" fill="#bb9af7"/>
+  <text x="52" y="134" fill="#c0caf5" font-size="15" font-family="Verdana, Geneva, sans-serif">Followers</text>
+  <text x="430" y="134" text-anchor="end" fill="#bb9af7" font-size="16" font-weight="700" font-family="Verdana, Geneva, sans-serif">3</text>
+  <circle cx="36" cy="156" r="5" fill="#9ece6a"/>
+  <text x="52" y="162" fill="#c0caf5" font-size="15" font-family="Verdana, Geneva, sans-serif">Forks</text>
+  <text x="430" y="162" text-anchor="end" fill="#9ece6a" font-size="16" font-weight="700" font-family="Verdana, Geneva, sans-serif">3</text>
+</svg>

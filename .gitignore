@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+*.log
+profile-preview-full.png
+banner-direct.png
+profile-preview-a11y.yml
+.playwright-mcp/

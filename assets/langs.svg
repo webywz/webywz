@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="195" viewBox="0 0 380 195" role="img" aria-label="Top Languages">
+  <rect width="380" height="195" rx="16" fill="#1a1b26"/>
+  <text x="24" y="36" fill="#7dcfff" font-size="16" font-weight="700" font-family="Verdana, Geneva, sans-serif">最常用的语言</text>
+  <text x="24" y="56" fill="#565f89" font-size="11" font-family="Verdana, Geneva, sans-serif">theme · tokyonight</text>
+  <text x="24" y="70" fill="#c0caf5" font-size="12" font-family="Verdana, Geneva, sans-serif">JavaScript</text>
+  <rect x="130" y="59" width="210" height="10" rx="5" fill="#121526"/>
+  <rect x="130" y="59" width="95" height="10" rx="5" fill="#f1e05a"/>
+  <text x="350" y="70" fill="#565f89" font-size="11" font-family="Verdana, Geneva, sans-serif">45%</text>
+  <text x="24" y="90" fill="#c0caf5" font-size="12" font-family="Verdana, Geneva, sans-serif">TypeScript</text>
+  <rect x="130" y="79" width="210" height="10" rx="5" fill="#121526"/>
+  <rect x="130" y="79" width="57" height="10" rx="5" fill="#3178c6"/>
+  <text x="350" y="90" fill="#565f89" font-size="11" font-family="Verdana, Geneva, sans-serif">27%</text>
+  <text x="24" y="110" fill="#c0caf5" font-size="12" font-family="Verdana, Geneva, sans-serif">Python</text>
+  <rect x="130" y="99" width="210" height="10" rx="5" fill="#121526"/>
+  <rect x="130" y="99" width="19" height="10" rx="5" fill="#3572a5"/>
+  <text x="350" y="110" fill="#565f89" font-size="11" font-family="Verdana, Geneva, sans-serif">9%</text>
+  <text x="24" y="130" fill="#c0caf5" font-size="12" font-family="Verdana, Geneva, sans-serif">Dart</text>
+  <rect x="130" y="119" width="210" height="10" rx="5" fill="#121526"/>
+  <rect x="130" y="119" width="19" height="10" rx="5" fill="#00b4ab"/>
+  <text x="350" y="130" fill="#565f89" font-size="11" font-family="Verdana, Geneva, sans-serif">9%</text>
+  <text x="24" y="150" fill="#c0caf5" font-size="12" font-family="Verdana, Geneva, sans-serif">HTML</text>
+  <rect x="130" y="139" width="210" height="10" rx="5" fill="#121526"/>
+  <rect x="130" y="139" width="19" height="10" rx="5" fill="#e34c26"/>
+  <text x="350" y="150" fill="#565f89" font-size="11" font-family="Verdana, Geneva, sans-serif">9%</text>
+</svg>
