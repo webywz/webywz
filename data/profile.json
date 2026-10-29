@@ -3,13 +3,46 @@
     "login": "webywz",
     "name": "Shoshana Dicki",
     "bio": null,
-    "publicRepos": 18,
+    "publicRepos": 20,
     "followers": 3,
     "following": 5,
     "avatarUrl": "https://avatars.githubusercontent.com/u/37465255?v=4",
     "htmlUrl": "https://github.com/webywz"
   },
   "repos": [
+    {
+      "name": "vibe-commit",
+      "fullName": "webywz/vibe-commit",
+      "description": "One-command CLI that writes stylish, conventional commit messages with personality",
+      "htmlUrl": "https://github.com/webywz/vibe-commit",
+      "stars": 0,
+      "forks": 0,
+      "language": null,
+      "updatedAt": "2026-10-29T10:51:26Z",
+      "createdAt": "2026-10-29T10:50:49Z"
+    },
+    {
+      "name": "contrib-aquarium",
+      "fullName": "webywz/contrib-aquarium",
+      "description": "Living SVG aquarium driven by your GitHub contribution graph — drop it in your README",
+      "htmlUrl": "https://github.com/webywz/contrib-aquarium",
+      "stars": 0,
+      "forks": 0,
+      "language": null,
+      "updatedAt": "2026-10-29T10:51:21Z",
+      "createdAt": "2026-10-29T10:50:29Z"
+    },
+    {
+      "name": "webywz",
+      "fullName": "webywz/webywz",
+      "description": "",
+      "htmlUrl": "https://github.com/webywz/webywz",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "updatedAt": "2026-10-29T10:46:51Z",
+      "createdAt": "2026-10-29T07:38:04Z"
+    },
     {
       "name": "breathing-github-profile",
       "fullName": "webywz/breathing-github-profile",
@@ -20,17 +53,6 @@
       "language": null,
       "updatedAt": "2026-10-29T07:39:02Z",
       "createdAt": "2026-10-29T07:38:56Z"
-    },
-    {
-      "name": "webywz",
-      "fullName": "webywz/webywz",
-      "description": "",
-      "htmlUrl": "https://github.com/webywz/webywz",
-      "stars": 0,
-      "forks": 0,
-      "language": null,
-      "updatedAt": "2026-10-29T07:38:10Z",
-      "createdAt": "2026-10-29T07:38:04Z"
     },
     {
       "name": "learn-fastapi",
@@ -143,5 +165,5 @@
       "createdAt": "2019-12-23T10:19:17Z"
     }
   ],
-  "fetchedAt": "2026-10-29T07:48:29.993Z"
+  "fetchedAt": "2026-10-29T10:58:13.598Z"
 }

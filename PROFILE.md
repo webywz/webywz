@@ -61,12 +61,20 @@ npm run refresh
 
 ## 项目选择逻辑
 
-脚本优先展示以下类型的项目：
-1. 预设的精选项目（nest-admin、lumi-relay 等）
-2. 有 stars 的活跃项目
-3. 最近更新的项目
+`scripts/refresh.js` 的 `selectHighlightProjects()` 按固定优先级挑选，**showcase 仓库只要存在就永远排在最前，不会被其他高星项目挤掉**：
 
-最多展示 6 个项目。
+1. **Showcase（永不降级）**
+   - `contrib-aquarium`
+   - `vibe-commit`
+   - `breathing-github-profile`
+2. **精选候选**（仓库存在才入选）
+   - `ClipboardHistoryMac`、`nest-admin`、`lumi-relay`、`learn-fastapi`
+3. **其余公开非 fork 仓库**：按 stars → 有描述 → 最近更新排序
+4. **排除**：profile 仓库本身（`webywz`），以及空的学习堆（`blog`、`PromiseA`、`vue-learn-music`、`UmoEditorDemo`）
+
+默认最多 6 张卡片；若 showcase 超过 6 个，仍会全部保留。
+
+项目卡展示名称、一行简介（API 描述或内置 fallback）、语言和 star 数；`contrib-aquarium` / `vibe-commit` 额外带 Demo 链接。统计与语言分布由脚本生成本地 `assets/stats.svg` / `assets/langs.svg`（tokyonight 深色），避免依赖可能暂停的第三方 stats 部署；连续提交条使用 `streak-stats.demolab.com?theme=tokyonight`。
 
 ## 测试
 
@@ -96,7 +104,7 @@ npm run refresh
 
 ### 修改项目选择逻辑
 
-编辑 `scripts/refresh.js` 中的 `selectHighlightProjects()` 函数。
+编辑 `scripts/refresh.js` 中的 `SHOWCASE_REPOS` / `FEATURED_REPOS` 或 `selectHighlightProjects()`。
 
 ### 调整刷新频率
 
