@@ -39,6 +39,18 @@ GitHub Actions 工作流 `.github/workflows/daily-refresh.yml`：
 - **定时运行：** 每天上海时间 00:00（UTC 16:00）
 - **手动触发：** 可在 Actions 页面手动运行
 - **智能提交：** 只在有实际变化时才提交
+- **贡献水族箱：** 同一 job 内调用 `webywz/contrib-aquarium@main`（官方 composite Action，等价于 `npx contrib-aquarium generate --user webywz --out assets/aquarium.svg`），重画 `assets/aquarium.svg`。Git 只在文件内容变化时把它写入提交。
+
+### 5. 贡献水族箱
+
+README 横幅下方嵌入本地 `assets/aquarium.svg`（相对路径，随仓库一起刷新，比跨仓库 raw URL 更不容易被 Camo 缓存卡住）。
+
+数据来源（`--source auto`）：
+1. **GraphQL** `contributionsCollection` — 需要 token，拿到完整近一年日历
+2. **公开 Events** — 无需 token，只有最近活动
+3. **Mock** — 用用户名哈希生成确定的演示日历，保证 CI / 离线也能出图
+
+本仓库 **不额外配置 secrets**：Actions 自动提供的 `GITHUB_TOKEN` 已足够读取公开贡献日历（见 contrib-aquarium 文档）。没有 token 时生成也不会失败，只是会回退到 Events / mock。
 
 ## 使用方法
 
@@ -57,7 +69,7 @@ npm run refresh
 
 ### 环境变量
 
-- `GITHUB_TOKEN`：GitHub API token（Actions 自动提供，本地测试可选）
+- `GITHUB_TOKEN`：GitHub API token（Actions 自动提供，本地测试可选）。Profile 刷新用它拉 REST API；水族箱 Action 用同一个 token 走 GraphQL。无需再配 PAT。
 
 ## 项目选择逻辑
 
@@ -83,6 +95,8 @@ npm run refresh
 - ✅ README 包含所有必需的标记
 - ✅ 标记成对出现且顺序正确
 - ✅ 内容区域非空
+- ✅ 水族箱 SVG 已嵌入（在横幅之后、精选项目之前），且 `assets/aquarium.svg` 是有效 SVG
+- ✅ `daily-refresh.yml` 仍按上海时间跑，并调用 contrib-aquarium Action
 
 ## 技术栈
 
@@ -94,6 +108,7 @@ npm run refresh
 ## 相关链接
 
 - 配套开源项目：[breathing-github-profile](https://github.com/webywz/breathing-github-profile)
+- 贡献水族箱：[contrib-aquarium](https://github.com/webywz/contrib-aquarium)
 - GitHub API 文档：https://docs.github.com/rest
 
 ## 维护
@@ -109,6 +124,19 @@ npm run refresh
 ### 调整刷新频率
 
 修改 `.github/workflows/daily-refresh.yml` 中的 cron 表达式。
+
+### 本地重画水族箱
+
+包尚未发布到 npm 时，clone sibling 仓库再生成：
+
+```bash
+git clone https://github.com/webywz/contrib-aquarium.git
+cd contrib-aquarium
+npm install
+npm run generate -- --user webywz --out /path/to/webywz/assets/aquarium.svg
+```
+
+有 token 时会走 GraphQL 真日历：`export GITHUB_TOKEN=...`（可选）。
 
 ---
 

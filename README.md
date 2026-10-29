@@ -17,6 +17,16 @@
 
 白天写网关和桌面工具，晚上让贡献图游进水族馆。不堆栈，不堆徽章——只把真正想给人用的东西放在第一屏。
 
+## 🐠 贡献水族箱
+
+这座缸由 [contrib-aquarium](https://github.com/webywz/contrib-aquarium) 根据我的 GitHub 贡献日历每天重画：提交变成鱼群，连续打卡撑起海藻，近两周活跃则冒出气泡。
+
+<p align="center">
+  <a href="https://github.com/webywz/contrib-aquarium">
+    <img src="assets/aquarium.svg" width="860" alt="webywz 的 GitHub 贡献水族箱：提交变成鱼，连续打卡长出海藻" />
+  </a>
+</p>
+
 ## ✨ 亮点 Demo
 
 <table>
@@ -25,7 +35,7 @@
 
 ### 🐠 [contrib-aquarium](https://github.com/webywz/contrib-aquarium)
 
-一年的 commit 变成一座会呼吸的 SVG 水族馆。丢进 README，贡献图开始游泳。
+一年的 commit 变成一座会呼吸的 SVG 水族馆。上面那座缸就是它每天给这份主页画的。
 
 [打开 Demo](https://github.com/webywz/contrib-aquarium)
 
@@ -139,7 +149,7 @@ Vue 响应式原理的分阶段实现
 
 ## 🔄 这个主页自己会呼吸
 
-这份 README 由 [breathing-github-profile](https://github.com/webywz/breathing-github-profile) 驱动：标记保护区每天刷新项目卡和统计，手写的句子不会被覆盖。
+这份 README 由 [breathing-github-profile](https://github.com/webywz/breathing-github-profile) 驱动：标记保护区每天刷新项目卡和统计；同一条 daily-refresh 还会调用 [contrib-aquarium](https://github.com/webywz/contrib-aquarium) 重画 `assets/aquarium.svg`。手写的句子不会被覆盖。
 
 <!--TIMESTAMP:START-->
 *最后更新：2026-10-29 18:58:13 (Asia/Shanghai)*

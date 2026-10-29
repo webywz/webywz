@@ -32,18 +32,28 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run refresh
+
+      # 使用 contrib-aquarium 官方 composite Action。
+      # GraphQL 贡献日历需要 token：这里用 Actions 自动注入的 GITHUB_TOKEN，
+      # 无需额外 secrets；拿不到日历时 Action 会回退到公开 Events / mock，鱼缸不会空白。
+      - name: 🐠 Generate contribution aquarium
+        uses: webywz/contrib-aquarium@main
+        with:
+          user: webywz
+          out: assets/aquarium.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: 📝 Check for changes
         id: check_changes
         run: |
-          git diff --quiet README.md data/profile.json assets/stats.svg assets/langs.svg || echo "changed=true" >> $GITHUB_OUTPUT
+          git diff --quiet README.md data/profile.json assets/stats.svg assets/langs.svg assets/aquarium.svg || echo "changed=true" >> $GITHUB_OUTPUT
       
       - name: 💾 Commit and push if changed
         if: steps.check_changes.outputs.changed == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add README.md data/profile.json assets/stats.svg assets/langs.svg
+          git add README.md data/profile.json assets/stats.svg assets/langs.svg assets/aquarium.svg
           git commit -m "🤖 自动更新 Profile 数据 $(TZ=Asia/Shanghai date '+%Y-%m-%d %H:%M:%S')"
           git push
       
