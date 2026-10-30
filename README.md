@@ -5,12 +5,12 @@
 **Turn contributions into something that breathes.**  
 **把贡献变成会呼吸的东西。**
 
-<img src="assets/terminal-flex.svg" alt="npx contrib-aquarium — living SVG from your contribution graph" width="860" height="79" />
+<img src="assets/terminal-flex.svg" alt="npx contrib-aquarium — living SVG from your contribution graph" width="860" height="97" />
 
 [![GitHub followers](https://img.shields.io/github/followers/webywz?style=flat-square&logo=github&color=7aa2f7&labelColor=1a1b26)](https://github.com/webywz)
 [![Profile Views](https://komarev.com/ghpvc/?username=webywz&style=flat-square&color=7aa2f7&label=profile+views)](https://github.com/webywz)
 
-<img src="assets/stack-strip.svg" alt="Stack · TypeScript Python NestJS FastAPI Vue Electron AI" width="860" height="62" />
+<img src="assets/stack-strip.svg" alt="Stack · TypeScript Python NestJS FastAPI Vue Electron AI" width="860" height="74" />
 
 </div>
 
@@ -23,7 +23,7 @@ Gateways and desktop tools by day; contribution graphs that swim by night. Commi
 ## ✨ 亮点 Demo · 产品墙 / Product wall
 
 <p align="center">
-  <img src="assets/wall-header.svg" alt="Product wall · 产品墙" width="880" height="48" />
+  <img src="assets/wall-header.svg" alt="Product wall · 产品墙" width="880" height="52" />
 </p>
 
 One outcome per cell. Copy the command and go. Each card carries a micro breathing chrome.
@@ -34,7 +34,7 @@ One outcome per cell. Copy the command and go. Each card carries a micro breathi
 <tr>
 <td width="50%" valign="top">
 
-<img src="assets/card-chrome.svg" alt="" width="100%" height="14" />
+<img src="assets/card-chrome.svg" alt="" width="100%" height="24" />
 
 ### [contrib-aquarium](https://github.com/webywz/contrib-aquarium)
 
@@ -49,7 +49,7 @@ npx contrib-aquarium
 </td>
 <td width="50%" valign="top">
 
-<img src="assets/card-chrome.svg" alt="" width="100%" height="14" />
+<img src="assets/card-chrome.svg" alt="" width="100%" height="24" />
 
 ### [vibe-commit](https://github.com/webywz/vibe-commit)
 
@@ -66,7 +66,7 @@ npx @webywz/vibe-commit
 <tr>
 <td width="50%" valign="top">
 
-<img src="assets/card-chrome.svg" alt="" width="100%" height="14" />
+<img src="assets/card-chrome.svg" alt="" width="100%" height="24" />
 
 ### [agent-trace](https://github.com/webywz/agent-trace)
 
@@ -81,7 +81,7 @@ npx @webywz/agent-trace
 </td>
 <td width="50%" valign="top">
 
-<img src="assets/card-chrome.svg" alt="" width="100%" height="14" />
+<img src="assets/card-chrome.svg" alt="" width="100%" height="24" />
 
 ### [eval-smoke](https://github.com/webywz/eval-smoke)
 
@@ -98,7 +98,7 @@ npx @webywz/eval-smoke
 <tr>
 <td width="50%" valign="top">
 
-<img src="assets/card-chrome.svg" alt="" width="100%" height="14" />
+<img src="assets/card-chrome.svg" alt="" width="100%" height="24" />
 
 ### [diff-vibe](https://github.com/webywz/diff-vibe)
 
@@ -113,7 +113,7 @@ npx @webywz/diff-vibe
 </td>
 <td width="50%" valign="top">
 
-<img src="assets/card-chrome.svg" alt="" width="100%" height="14" />
+<img src="assets/card-chrome.svg" alt="" width="100%" height="24" />
 
 ### [context-diet](https://github.com/webywz/context-diet)
 
@@ -132,7 +132,7 @@ npx @webywz/context-diet
 ## Contribution aquarium · 贡献水族箱
 
 <p align="center">
-  <img src="assets/mid-breath.svg" alt="Mid breath · aquarium" width="880" height="36" />
+  <img src="assets/mid-breath.svg" alt="Mid breath · aquarium" width="880" height="40" />
 </p>
 
 Second breath layer — quieter than the hero. This tank is redrawn daily by [contrib-aquarium](https://github.com/webywz/contrib-aquarium) from my GitHub contribution calendar: commits become schools of fish, streaks grow kelp, recent activity lifts bubbles.

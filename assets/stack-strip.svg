@@ -1,60 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="64" viewBox="0 0 880 64" role="img" aria-label="Stack · TypeScript Python NestJS FastAPI Vue Electron AI">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="76" viewBox="0 0 880 76" role="img" aria-label="Stack · TypeScript Python NestJS FastAPI Vue Electron AI">
   <defs>
     <linearGradient id="sbg" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#1a1b26"/>
       <stop offset="100%" stop-color="#16161e"/>
     </linearGradient>
   </defs>
-  <rect width="880" height="64" rx="14" fill="url(#sbg)"/>
-  <text x="28" y="24" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#565f89" letter-spacing="2">STACK · 技术栈</text>
-  <g transform="translate(28, 34)">
-    <rect x="0" y="0" width="94" height="22" rx="11" fill="#12131c" stroke="#7aa2f7" stroke-opacity="0.45"/>
-    <circle cx="10" cy="11" r="3" fill="#7aa2f7">
-      <animate attributeName="opacity" values="0.35;1;0.35" dur="3.6s" begin="0s" repeatCount="indefinite"/>
-    </circle>
-    <text x="20" y="15" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#c0caf5">TypeScript</text>
-  </g>
-  <g transform="translate(148, 34)">
-    <rect x="0" y="0" width="62" height="22" rx="11" fill="#12131c" stroke="#7dcfff" stroke-opacity="0.45"/>
-    <circle cx="10" cy="11" r="3" fill="#7dcfff">
-      <animate attributeName="opacity" values="0.35;1;0.35" dur="3.6s" begin="0.3s" repeatCount="indefinite"/>
-    </circle>
-    <text x="20" y="15" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#c0caf5">Python</text>
-  </g>
-  <g transform="translate(248, 34)">
-    <rect x="0" y="0" width="62" height="22" rx="11" fill="#12131c" stroke="#7aa2f7" stroke-opacity="0.45"/>
-    <circle cx="10" cy="11" r="3" fill="#7aa2f7">
-      <animate attributeName="opacity" values="0.35;1;0.35" dur="3.6s" begin="0.6s" repeatCount="indefinite"/>
-    </circle>
-    <text x="20" y="15" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#c0caf5">NestJS</text>
-  </g>
-  <g transform="translate(348, 34)">
-    <rect x="0" y="0" width="70" height="22" rx="11" fill="#12131c" stroke="#7dcfff" stroke-opacity="0.45"/>
-    <circle cx="10" cy="11" r="3" fill="#7dcfff">
-      <animate attributeName="opacity" values="0.35;1;0.35" dur="3.6s" begin="0.9s" repeatCount="indefinite"/>
-    </circle>
-    <text x="20" y="15" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#c0caf5">FastAPI</text>
-  </g>
-  <g transform="translate(458, 34)">
-    <rect x="0" y="0" width="38" height="22" rx="11" fill="#12131c" stroke="#9ece6a" stroke-opacity="0.45"/>
-    <circle cx="10" cy="11" r="3" fill="#9ece6a">
-      <animate attributeName="opacity" values="0.35;1;0.35" dur="3.6s" begin="1.2s" repeatCount="indefinite"/>
-    </circle>
-    <text x="20" y="15" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#c0caf5">Vue</text>
-  </g>
-  <g transform="translate(538, 34)">
-    <rect x="0" y="0" width="78" height="22" rx="11" fill="#12131c" stroke="#7aa2f7" stroke-opacity="0.45"/>
-    <circle cx="10" cy="11" r="3" fill="#7aa2f7">
-      <animate attributeName="opacity" values="0.35;1;0.35" dur="3.6s" begin="1.5s" repeatCount="indefinite"/>
-    </circle>
-    <text x="20" y="15" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#c0caf5">Electron</text>
-  </g>
-  <g transform="translate(658, 34)">
-    <rect x="0" y="0" width="110" height="22" rx="11" fill="#12131c" stroke="#7dcfff" stroke-opacity="0.45"/>
-    <circle cx="10" cy="11" r="3" fill="#7dcfff">
-      <animate attributeName="opacity" values="0.35;1;0.35" dur="3.6s" begin="1.8s" repeatCount="indefinite"/>
-    </circle>
-    <text x="20" y="15" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#c0caf5">AI Workflows</text>
+  <rect x="0.5" y="0.5" width="879" height="75" rx="14" fill="url(#sbg)" stroke="#292e42" stroke-width="1"/>
+  <text x="28" y="24" font-family="'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace" font-size="11" fill="#565f89" letter-spacing="2.5">STACK · TECH</text>
+  <g font-family="'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" letter-spacing="0.5" fill="#c0caf5">
+    <!-- each: H=30 rx=15 stroke=1.25 padL=28 padR=18; accents alternate -->
+    <g transform="translate(28, 36)">
+      <rect width="118" height="30" rx="15" fill="#12131c" stroke="#7aa2f7" stroke-width="1.25" stroke-opacity="0.6"/>
+      <circle cx="15" cy="15" r="3.5" fill="#7aa2f7"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.6s" begin="0s" repeatCount="indefinite"/></circle>
+      <text x="28" y="20">TypeScript</text>
+    </g>
+    <g transform="translate(158, 36)">
+      <rect width="90" height="30" rx="15" fill="#12131c" stroke="#7dcfff" stroke-width="1.25" stroke-opacity="0.6"/>
+      <circle cx="15" cy="15" r="3.5" fill="#7dcfff"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.6s" begin="0.3s" repeatCount="indefinite"/></circle>
+      <text x="28" y="20">Python</text>
+    </g>
+    <g transform="translate(260, 36)">
+      <rect width="90" height="30" rx="15" fill="#12131c" stroke="#7aa2f7" stroke-width="1.25" stroke-opacity="0.6"/>
+      <circle cx="15" cy="15" r="3.5" fill="#7aa2f7"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.6s" begin="0.6s" repeatCount="indefinite"/></circle>
+      <text x="28" y="20">NestJS</text>
+    </g>
+    <g transform="translate(362, 36)">
+      <rect width="98" height="30" rx="15" fill="#12131c" stroke="#7dcfff" stroke-width="1.25" stroke-opacity="0.6"/>
+      <circle cx="15" cy="15" r="3.5" fill="#7dcfff"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.6s" begin="0.9s" repeatCount="indefinite"/></circle>
+      <text x="28" y="20">FastAPI</text>
+    </g>
+    <g transform="translate(472, 36)">
+      <rect width="80" height="30" rx="15" fill="#12131c" stroke="#7aa2f7" stroke-width="1.25" stroke-opacity="0.6"/>
+      <circle cx="15" cy="15" r="3.5" fill="#7aa2f7"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.6s" begin="1.2s" repeatCount="indefinite"/></circle>
+      <text x="28" y="20">Vue</text>
+    </g>
+    <g transform="translate(564, 36)">
+      <rect width="104" height="30" rx="15" fill="#12131c" stroke="#7dcfff" stroke-width="1.25" stroke-opacity="0.6"/>
+      <circle cx="15" cy="15" r="3.5" fill="#7dcfff"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.6s" begin="1.5s" repeatCount="indefinite"/></circle>
+      <text x="28" y="20">Electron</text>
+    </g>
+    <g transform="translate(680, 36)">
+      <rect width="80" height="30" rx="15" fill="#12131c" stroke="#7aa2f7" stroke-width="1.25" stroke-opacity="0.6"/>
+      <circle cx="15" cy="15" r="3.5" fill="#7aa2f7"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.6s" begin="1.8s" repeatCount="indefinite"/></circle>
+      <text x="28" y="20">AI</text>
+    </g>
   </g>
 </svg>
