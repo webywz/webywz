@@ -8,8 +8,10 @@ import {
   FEATURED_REPOS,
   SKIP_REPOS,
   TRIVIAL_REPOS,
+  PRODUCT_WALL,
   selectHighlightProjects,
   generateProjectsMarkdown,
+  generateProductWallMarkdown,
   generateStatsMarkdown,
   updateReadmeContent,
   getShanghaiTime,
@@ -18,8 +20,11 @@ import {
   renderStatsSvg,
   renderLangsSvg,
   renderStreakSvg,
+  renderProductCardSvg,
+  renderShippingCardSvg,
   computeStreakFromDays,
-  aggregateLanguages
+  aggregateLanguages,
+  wrapLines
 } from '../scripts/refresh.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -175,9 +180,12 @@ function testReadmeStructure() {
     '亮点 Demo 至少两行（2×2）'
   );
   assert(
-    highlightSection.includes('npx contrib-aquarium') ||
-      highlightSection.includes('npx @webywz/'),
-    '产品墙包含可复制的 npx / install 命令'
+    highlightSection.includes('assets/product-contrib-aquarium.svg'),
+    '产品墙使用 SVG 产品卡（无 markdown H3 蓝下划线）'
+  );
+  assert(
+    PRODUCT_WALL.every((p) => highlightSection.includes(`assets/product-${p.name}.svg`)),
+    '产品墙六张 SVG 卡齐全'
   );
   assert(readme.includes('产品墙') || readme.includes('Product wall'), '亮点区标注产品墙');
   assert(readme.includes('assets/terminal-flex.svg'), 'README 含克制伪终端 SVG');
@@ -191,11 +199,11 @@ function testReadmeStructure() {
   assert(!readme.includes('github-readme-stats.vercel.app'), '不依赖 vercel stats');
   assert(readme.includes('assets/aquarium.svg'), 'README 嵌入本地贡献水族箱 SVG');
   assert(readme.includes('assets/wall-header.svg'), 'README 含产品墙呼吸标题条');
-  assert(readme.includes('assets/card-chrome.svg'), 'README 产品卡含微光 chrome');
   assert(readme.includes('assets/mid-breath.svg'), 'README 含中段呼吸分隔');
   assert(readme.includes('assets/stack-strip.svg'), 'README 含动效技术栈条');
   assert(readme.includes('assets/social-strip.svg'), 'README 含页脚社交灯条');
   assert(readme.includes('assets/divider-breath.svg'), 'README 含呼吸分隔线');
+  assert(!highlightSection.includes('### ['), '产品墙不再用 markdown H3 链接标题');
   assert(
     readme.includes('贡献水族箱') || readme.includes('水族馆'),
     'README 用中文说明水族箱'
@@ -329,17 +337,34 @@ function testProjectCards() {
     repo('learn-fastapi', { language: 'Python', stars: 3 })
   ]);
 
-  assert(markdown.includes('contrib-aquarium'), '卡片包含仓库名');
-  assert(
-    markdown.includes('Living SVG aquarium') || markdown.includes('活体 SVG 水族馆'),
-    '卡片包含一行简介'
-  );
-  assert(markdown.includes('JavaScript') || markdown.includes('SVG'), '卡片包含语言');
-  assert(markdown.includes('⭐ 2'), '卡片包含 star 数');
-  assert(markdown.includes('learn-fastapi'), '卡片包含 featured 仓库');
-  assert(markdown.includes(resolveDescription(repo('learn-fastapi'))), '空描述走 fallback');
-  assert(markdown.includes('Demo'), 'contrib-aquarium 带 Demo 链接');
+  assert(markdown.includes('ship-contrib-aquarium.svg'), 'Also shipping 引用 SVG 卡');
+  assert(markdown.includes('ship-learn-fastapi.svg'), '卡片包含 featured 仓库 SVG');
   assert(markdown.includes('<table>'), '项目卡使用双列卡片布局');
+  assert(!markdown.includes('### ['), 'Also shipping 不再用 markdown H3 链接表');
+
+  const shipSvg = renderShippingCardSvg(
+    repo('contrib-aquarium', { language: 'JavaScript', stars: 2 })
+  );
+  assert(shipSvg.includes('contrib-aquarium'), 'shipping SVG 含仓库名');
+  assert(
+    shipSvg.includes('活体 SVG 水族馆') || shipSvg.includes('Living SVG aquarium'),
+    'shipping SVG 含简介'
+  );
+  assert(shipSvg.includes('JavaScript') || shipSvg.includes('SVG'), 'shipping SVG 含语言 pill');
+  assert(shipSvg.includes('★ 2') || shipSvg.includes('⭐ 2'), 'shipping SVG 含星标');
+  assert(shipSvg.includes('Demo'), 'contrib-aquarium shipping 卡带 Demo');
+  assert(shipSvg.includes('rx="14"') || shipSvg.includes('rx=\"14\"'), 'shipping 卡圆角对齐主墙');
+  assert(shipSvg.includes('#7aa2f7'), 'shipping 用 tokyo-night 青蓝');
+  assert(!shipSvg.includes('#bb9af7'), 'shipping 无紫粉');
+
+  const wallMd = generateProductWallMarkdown();
+  assert(wallMd.includes('product-contrib-aquarium.svg'), '产品墙 markdown 引用 product SVG');
+  assert(PRODUCT_WALL.length === 6, '产品墙固定 6 卡');
+  const productSvg = renderProductCardSvg(PRODUCT_WALL[0]);
+  assert(productSvg.includes('npx contrib-aquarium'), '产品卡含轻量终端 npx');
+  assert(productSvg.includes('<animate'), '产品卡含呼吸微光');
+  assert(!productSvg.includes('#bb9af7'), '产品卡无紫粉');
+  assert(wrapLines('hello world', 5, 2).length >= 1, 'wrapLines 可用');
 
   const stats = generateStatsMarkdown();
   assert(stats.includes('assets/stats.svg'), '统计区引用本地 stats.svg');
@@ -401,6 +426,18 @@ function testGeneratedSvgs() {
     assert(svg.includes('<svg'), `${name} 是 SVG`);
     assert(svg.includes('<animate') || svg.includes('animateTransform'), `${name} 含呼吸动效`);
   }
+  for (const product of PRODUCT_WALL) {
+    const p = join(ROOT_DIR, 'assets', `product-${product.name}.svg`);
+    assert(existsSync(p), `product-${product.name}.svg 存在`);
+    const svg = readFileSync(p, 'utf-8');
+    assert(svg.includes(product.cmd), `product-${product.name} 含 npx`);
+    assert(svg.includes('<animate'), `product-${product.name} 含呼吸`);
+    assert(!svg.includes('#bb9af7'), `product-${product.name} 无紫粉`);
+  }
+  assert(existsSync(join(ROOT_DIR, 'assets', 'ship-contrib-aquarium.svg')), 'ship-contrib-aquarium.svg 存在');
+  const shipFile = readFileSync(join(ROOT_DIR, 'assets', 'ship-contrib-aquarium.svg'), 'utf-8');
+  assert(shipFile.includes('<animate'), 'shipping SVG 含呼吸');
+  assert(shipFile.includes('★') || shipFile.includes('⭐'), 'shipping SVG 含星标');
   assert(existsSync(statsPath), 'stats.svg 存在');
   assert(existsSync(langsPath), 'langs.svg 存在');
   const streakPath = join(ROOT_DIR, 'assets', 'streak.svg');
@@ -487,6 +524,14 @@ function testWorkflowIntact() {
   assert(
     workflow.includes('assets/aquarium.svg'),
     '变更检测 / 提交包含 aquarium.svg'
+  );
+  assert(
+    workflow.includes('assets/ship-*.svg') || workflow.includes('assets/ship-'),
+    '每日刷新提交 Also shipping SVG 卡'
+  );
+  assert(
+    workflow.includes('assets/streak.svg'),
+    '每日刷新提交 streak.svg'
   );
   assert(
     workflow.includes('secrets.GITHUB_TOKEN'),

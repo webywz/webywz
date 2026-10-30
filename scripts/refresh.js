@@ -72,6 +72,59 @@ export const DEMO_LINKS = {
     url: 'https://github.com/webywz/vibe-commit'
   }
 };
+/** Hand-crafted product wall (亮点 Demo) — static catalog, regenerable SVGs. */
+export const PRODUCT_WALL = [
+  {
+    name: 'contrib-aquarium',
+    tag: 'CLI',
+    href: 'https://github.com/webywz/contrib-aquarium',
+    en: ['A year of commits as a living SVG aquarium.'],
+    zh: ['一年的 commit 变成会呼吸的 SVG 水族馆。'],
+    cmd: 'npx contrib-aquarium'
+  },
+  {
+    name: 'vibe-commit',
+    tag: 'CLI',
+    href: 'https://github.com/webywz/vibe-commit',
+    en: ['Conventional commits with taste — one command.'],
+    zh: ['一条命令，写出有品味的 conventional commit。'],
+    cmd: 'npx @webywz/vibe-commit'
+  },
+  {
+    name: 'agent-trace',
+    tag: 'CLI',
+    href: 'https://github.com/webywz/agent-trace',
+    en: ['Messy agent logs → readable timeline + Mermaid.'],
+    zh: ['杂乱 agent 日志变成可读时间线与 Mermaid。'],
+    cmd: 'npx @webywz/agent-trace'
+  },
+  {
+    name: 'eval-smoke',
+    tag: 'CLI',
+    href: 'https://github.com/webywz/eval-smoke',
+    en: ['One-minute smoke evals for prompts and models.'],
+    zh: ['一分钟跑通 prompt / 模型冒烟评测。'],
+    cmd: 'npx @webywz/eval-smoke'
+  },
+  {
+    name: 'diff-vibe',
+    tag: 'CLI',
+    href: 'https://github.com/webywz/diff-vibe',
+    en: ['git diff → paste-ready PR title and body.'],
+    zh: ['git diff 直接变成可贴的 PR title / body。'],
+    cmd: 'npx @webywz/diff-vibe'
+  },
+  {
+    name: 'context-diet',
+    tag: 'CLI',
+    href: 'https://github.com/webywz/context-diet',
+    en: ['Slim LLM context before you send it.'],
+    zh: ['发之前先给上下文瘦身，估算 token。'],
+    cmd: 'npx @webywz/context-diet'
+  }
+];
+
+
 
 export const STATS_THEME = 'tokyonight';
 
@@ -201,22 +254,155 @@ function escapeHtml(text) {
     .replace(/"/g, '&quot;');
 }
 
-function projectCard(repo) {
-  const desc = resolveDescription(repo);
-  const language = repo.language || FALLBACK_LANGUAGES[repo.name] || '—';
-  const stars = Number.isFinite(repo.stars) ? repo.stars : 0;
-  const demo = DEMO_LINKS[repo.name];
-  const demoBit = demo ? ` · [${demo.label}](${demo.url})` : '';
+function shippingAssetName(repoName) {
+  return `ship-${String(repoName).replace(/[^a-zA-Z0-9._-]/g, '-')}.svg`;
+}
 
-  return `### [${repo.name}](${repo.htmlUrl})
+function productAssetName(repoName) {
+  return `product-${String(repoName).replace(/[^a-zA-Z0-9._-]/g, '-')}.svg`;
+}
 
-${desc}
-
-\`${language}\` · ⭐ ${stars}${demoBit}`;
+/** Soft-wrap to ≤maxLen units, ≤maxLines lines. CJK glyphs count as ~1.7 units. */
+export function wrapLines(text, maxLen = 44, maxLines = 2) {
+  const raw = String(text || '').trim();
+  if (!raw) return [];
+  const units = (s) => [...s].reduce((n, ch) => n + (/[\u3400-\u9fff\uf900-\ufaff]/.test(ch) ? 1.7 : 1), 0);
+  if (units(raw) <= maxLen) return [raw];
+  const lines = [];
+  let rest = raw;
+  while (rest && lines.length < maxLines) {
+    if (units(rest) <= maxLen) {
+      lines.push(rest);
+      rest = '';
+      break;
+    }
+    let cut = 0;
+    let w = 0;
+    const chars = [...rest];
+    for (let i = 0; i < chars.length; i += 1) {
+      const add = /[\u3400-\u9fff\uf900-\ufaff]/.test(chars[i]) ? 1.7 : 1;
+      if (w + add > maxLen) break;
+      w += add;
+      cut = i + 1;
+    }
+    let slice = chars.slice(0, cut).join('');
+    const breakAt = Math.max(
+      slice.lastIndexOf(' '),
+      slice.lastIndexOf('，'),
+      slice.lastIndexOf('。'),
+      slice.lastIndexOf('、'),
+      slice.lastIndexOf('·'),
+      slice.lastIndexOf('-'),
+      slice.lastIndexOf('/')
+    );
+    if (breakAt >= Math.floor(slice.length * 0.4)) {
+      cut = breakAt + (slice[breakAt] === ' ' ? 0 : 1);
+      slice = chars.slice(0, cut).join('');
+    }
+    let piece = slice.trim();
+    rest = chars.slice(cut).join('').trim();
+    // Avoid orphan tails (e.g. "水族馆。") — pull them onto this line when short.
+    if (rest && units(rest) <= 10 && lines.length < maxLines - 1) {
+      piece = (piece + (piece.endsWith('-') ? '' : ' ') + rest).trim();
+      rest = '';
+    } else if (rest && units(rest) <= 10 && lines.length === maxLines - 1) {
+      piece = (piece + (piece.endsWith('-') ? '' : ' ') + rest).trim();
+      rest = '';
+    }
+    if (lines.length === maxLines - 1 && rest) {
+      piece = piece.replace(/[.,，。、\s]+$/u, '') + '…';
+      rest = '';
+    }
+    lines.push(piece);
+  }
+  return lines;
 }
 
 /**
- * Rich 2-column project cards: pin + description + language + stars.
+ * Product wall card — full SVG tile (no markdown H3 links → no cheap blue underline).
+ * Light terminal strip for npx; breath only on chrome/edge.
+ */
+export function renderProductCardSvg(product) {
+  const W = 420;
+  const H = 208;
+  const name = product?.name || 'project';
+  const tag = product?.tag || 'CLI';
+  const enLines = Array.isArray(product?.en) ? product.en : wrapLines(product?.en || '', 48, 2);
+  const zhLines = Array.isArray(product?.zh) ? product.zh : wrapLines(product?.zh || '', 34, 2);
+  const cmd = product?.cmd || `npx @webywz/${name}`;
+  const id = `pw${name.replace(/[^a-zA-Z0-9]/g, '')}`;
+
+  const enBlock = enLines.map((line, i) =>
+    `<text x="22" y="${58 + i * 16}" fill="${THEME.fg}" font-size="12" font-weight="500" font-family="${FONT_UI}">${svgText(line)}</text>`
+  ).join('\n  ');
+  const zhY0 = 58 + enLines.length * 16 + 4;
+  const zhBlock = zhLines.map((line, i) =>
+    `<text x="22" y="${zhY0 + i * 16}" fill="${THEME.muted}" font-size="12" font-weight="500" font-family="${FONT_UI}">${svgText(line)}</text>`
+  ).join('\n  ');
+
+  const termY = 158;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${svgText(name)}">
+  ${cardChrome(id, W, H, THEME.blue)}
+  <text x="22" y="34" fill="${THEME.fgStrong}" font-size="15" font-weight="700" font-family="${FONT_UI}">${svgText(name)}</text>
+  <rect x="${W - 58}" y="20" width="36" height="18" rx="9" fill="${THEME.inset}" stroke="${THEME.border}" stroke-width="1"/>
+  <text x="${W - 40}" y="33" text-anchor="middle" fill="${THEME.cyan}" font-size="9" font-weight="600" font-family="${FONT_NUM}" letter-spacing="0.06em">${svgText(tag)}</text>
+  ${enBlock}
+  ${zhBlock}
+  <rect x="18" y="${termY}" width="${W - 36}" height="34" rx="8" fill="${THEME.inset}" stroke="#292e42" stroke-width="1"/>
+  <text x="30" y="${termY + 21}" font-family="${FONT_NUM}" font-size="12" fill="${THEME.blue}">›</text>
+  <text x="46" y="${termY + 21}" font-family="${FONT_NUM}" font-size="12" fill="${THEME.fgStrong}">${svgText(cmd)}</text>
+  <rect x="${46 + Math.min(cmd.length, 28) * 7.2}" y="${termY + 10}" width="7" height="14" rx="1.5" fill="${THEME.blue}">
+    <animate attributeName="opacity" values="1;0.12;1" dur="1.1s" repeatCount="indefinite"/>
+  </rect>
+</svg>
+`;
+}
+
+/**
+ * Also-shipping card — same clinical chrome as product wall, compact (no terminal).
+ */
+export function renderShippingCardSvg(repo) {
+  const W = 420;
+  const H = 156;
+  const name = repo?.name || 'project';
+  const desc = resolveDescription(repo);
+  const language = repo?.language || FALLBACK_LANGUAGES[name] || '—';
+  const stars = Number.isFinite(repo?.stars) ? repo.stars : 0;
+  const demo = DEMO_LINKS[name];
+  const id = `sh${name.replace(/[^a-zA-Z0-9]/g, '')}`;
+  const descLines = wrapLines(desc, 40, 2);
+
+  const descBlock = descLines.map((line, i) =>
+    `<text x="22" y="${58 + i * 17}" fill="${THEME.fg}" font-size="12" font-weight="500" font-family="${FONT_UI}">${svgText(line)}</text>`
+  ).join('\n  ');
+
+  const pillW = Math.max(52, 14 + language.length * 7.2);
+  const demoBit = demo
+    ? `<text x="396" y="132" text-anchor="end" fill="${THEME.blue}" font-size="11" font-weight="600" font-family="${FONT_UI}">${svgText(demo.label)} →</text>`
+    : '';
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${svgText(name)}">
+  ${cardChrome(id, W, H, THEME.cyan)}
+  <text x="22" y="34" fill="${THEME.fgStrong}" font-size="15" font-weight="700" font-family="${FONT_UI}">${svgText(name)}</text>
+  ${descBlock}
+  <rect x="22" y="116" width="${pillW}" height="20" rx="10" fill="${THEME.inset}" stroke="${THEME.border}" stroke-width="1"/>
+  <text x="${22 + pillW / 2}" y="130" text-anchor="middle" fill="${THEME.cyan}" font-size="10" font-weight="600" font-family="${FONT_NUM}">${svgText(language)}</text>
+  <text x="${22 + pillW + 14}" y="130" fill="${THEME.fgStrong}" font-size="12" font-weight="600" font-family="${FONT_NUM}">★ ${svgText(stars)}</text>
+  ${demoBit}
+</svg>
+`;
+}
+
+function projectCardMarkdown(repo) {
+  const file = shippingAssetName(repo.name);
+  const href = repo.htmlUrl || `https://github.com/${USERNAME}/${repo.name}`;
+  return `<a href="${href}">
+<img src="assets/${file}" width="420" height="156" alt="${escapeHtml(repo.name)}" />
+</a>`;
+}
+
+/**
+ * Rich 2-column Also-shipping cards — SVG tiles matching product wall language.
  */
 export function generateProjectsMarkdown(repos) {
   const highlights = selectHighlightProjects(repos);
@@ -225,9 +411,9 @@ export function generateProjectsMarkdown(repos) {
     return '暂无公开项目';
   }
 
-  const cells = highlights.map((repo) => `<td width="50%" valign="top">
+  const cells = highlights.map((repo) => `<td width="50%" align="center" valign="top">
 
-${projectCard(repo)}
+${projectCardMarkdown(repo)}
 
 </td>`);
 
@@ -240,6 +426,31 @@ ${right}
 </tr>`);
   }
 
+  return `<table>
+${rows.join('\n')}
+</table>`;
+}
+
+/** Product wall markdown table (hand section uses committed SVGs). */
+export function generateProductWallMarkdown(products = PRODUCT_WALL) {
+  const cells = products.map((p) => {
+    const file = productAssetName(p.name);
+    return `<td width="50%" align="center" valign="top">
+
+<a href="${p.href}">
+<img src="assets/${file}" width="420" height="208" alt="${escapeHtml(p.name)}" />
+</a>
+
+</td>`;
+  });
+  const rows = [];
+  for (let i = 0; i < cells.length; i += 2) {
+    const right = cells[i + 1] || '<td width="50%" valign="top"></td>';
+    rows.push(`<tr>
+${cells[i]}
+${right}
+</tr>`);
+  }
   return `<table>
 ${rows.join('\n')}
 </table>`;
@@ -472,6 +683,32 @@ export function renderStreakSvg(streak = {}) {
 `;
 }
 
+export function writeProductWallAssets(rootDir = ROOT_DIR, products = PRODUCT_WALL) {
+  const assetsDir = join(rootDir, 'assets');
+  mkdirSync(assetsDir, { recursive: true });
+  for (const product of products) {
+    writeFileSync(
+      join(assetsDir, productAssetName(product.name)),
+      renderProductCardSvg(product),
+      'utf-8'
+    );
+  }
+}
+
+export function writeShippingAssets(repos, rootDir = ROOT_DIR) {
+  const assetsDir = join(rootDir, 'assets');
+  mkdirSync(assetsDir, { recursive: true });
+  const highlights = selectHighlightProjects(repos);
+  for (const repo of highlights) {
+    writeFileSync(
+      join(assetsDir, shippingAssetName(repo.name)),
+      renderShippingCardSvg(repo),
+      'utf-8'
+    );
+  }
+  return highlights;
+}
+
 export function writeGeneratedAssets(data, rootDir = ROOT_DIR) {
   const assetsDir = join(rootDir, 'assets');
   mkdirSync(assetsDir, { recursive: true });
@@ -482,6 +719,8 @@ export function writeGeneratedAssets(data, rootDir = ROOT_DIR) {
     renderStreakSvg(data.streak || {}),
     'utf-8'
   );
+  writeProductWallAssets(rootDir);
+  writeShippingAssets(data.repos || [], rootDir);
 }
 
 /**
