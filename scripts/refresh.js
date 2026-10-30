@@ -43,7 +43,8 @@ export const TRIVIAL_REPOS = new Set([
 
 export const FALLBACK_DESCRIPTIONS = {
   'contrib-aquarium': '由 GitHub 贡献图驱动的活体 SVG 水族馆，可直接嵌入 README',
-  'vibe-commit': '一条命令写出有品味的 conventional commit',
+  'vibe-commit': '有品味的 conventional commit；examples 含 pair-workflow',
+  'diff-vibe': 'git diff 成 PR；支持 CI --github / Job Summary',
   'breathing-github-profile': '开源的活 README 生成器：每日刷新 + 测试',
   'learn-fastapi': '面向前端开发者的 FastAPI 后端实战教程',
   ClipboardHistoryMac: 'macOS 剪贴板历史工具',
@@ -86,8 +87,8 @@ export const PRODUCT_WALL = [
     name: 'vibe-commit',
     tag: 'CLI',
     href: 'https://github.com/webywz/vibe-commit',
-    en: ['Conventional commits with taste — one command.'],
-    zh: ['一条命令，写出有品味的 conventional commit。'],
+    en: ['Tasteful commits — examples include pair-workflow.'],
+    zh: ['有品味的 commit；examples 含成对 pair-workflow。'],
     cmd: 'npx @webywz/vibe-commit'
   },
   {
@@ -110,8 +111,8 @@ export const PRODUCT_WALL = [
     name: 'diff-vibe',
     tag: 'CLI',
     href: 'https://github.com/webywz/diff-vibe',
-    en: ['git diff → paste-ready PR title and body.'],
-    zh: ['git diff 直接变成可贴的 PR title / body。'],
+    en: ['git diff → PR; CI --github + Job Summary.'],
+    zh: ['git diff 成 PR；CI --github 与 Job Summary。'],
     cmd: 'npx @webywz/diff-vibe'
   },
   {

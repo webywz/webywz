@@ -39,7 +39,7 @@ GitHub Actions 工作流 `.github/workflows/daily-refresh.yml`：
 - **定时运行：** 每天上海时间 00:00（UTC 16:00）
 - **手动触发：** 可在 Actions 页面手动运行
 - **智能提交：** 只在有实际变化时才提交
-- **贡献水族箱：** 同一 job 内调用 `webywz/contrib-aquarium@main`（官方 composite Action，等价于 `npx contrib-aquarium generate --user webywz --out assets/aquarium.svg`），重画 `assets/aquarium.svg`。Git 只在文件内容变化时把它写入提交。
+- **贡献水族箱：** 同一 job 内调用钉版 `webywz/contrib-aquarium@v0.1.3`（与 workflow 注释一致；官方 composite Action，等价于 `npx contrib-aquarium@0.1.3 generate --user webywz --out assets/aquarium.svg`），重画 `assets/aquarium.svg`。Git 只在文件内容变化时把它写入提交。勿再用 `@main`。
 
 ### 5. 贡献水族箱
 
@@ -96,7 +96,7 @@ npm run refresh
 - ✅ 标记成对出现且顺序正确
 - ✅ 内容区域非空
 - ✅ 水族箱 SVG 已嵌入（在横幅之后、精选项目之前），且 `assets/aquarium.svg` 是有效 SVG
-- ✅ `daily-refresh.yml` 仍按上海时间跑，并调用 contrib-aquarium Action
+- ✅ `daily-refresh.yml` 仍按上海时间跑，并调用钉版 `webywz/contrib-aquarium@v0.1.3`
 
 ## 技术栈
 
@@ -127,13 +127,20 @@ npm run refresh
 
 ### 本地重画水族箱
 
-包尚未发布到 npm 时，clone sibling 仓库再生成：
+优先用钉版 npm 包（与 Action `@v0.1.3` 同源）：
+
+```bash
+npx --yes contrib-aquarium@0.1.3 generate --user webywz --out assets/aquarium.svg --width 860
+```
+
+也可 clone sibling 仓库再生成：
 
 ```bash
 git clone https://github.com/webywz/contrib-aquarium.git
 cd contrib-aquarium
+git checkout v0.1.3
 npm install
-npm run generate -- --user webywz --out /path/to/webywz/assets/aquarium.svg
+npm run generate -- --user webywz --out /path/to/webywz/assets/aquarium.svg --width 860
 ```
 
 有 token 时会走 GraphQL 真日历：`export GITHUB_TOKEN=...`（可选）。
