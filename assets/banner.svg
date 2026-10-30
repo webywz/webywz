@@ -1,74 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="260" viewBox="0 0 1100 260" role="img" aria-label="Noah · webywz · contributions that breathe">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="Noah · webywz · contributions that breathe">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0b0f19"/>
-      <stop offset="55%" stop-color="#12182a"/>
+      <stop offset="0%" stop-color="#070a12"/>
+      <stop offset="40%" stop-color="#101525"/>
       <stop offset="100%" stop-color="#1a1b26"/>
     </linearGradient>
-    <radialGradient id="core" cx="72%" cy="38%" r="42%">
-      <stop offset="0%" stop-color="#7aa2f7" stop-opacity="0.28"/>
-      <stop offset="45%" stop-color="#7dcfff" stop-opacity="0.10"/>
+    <radialGradient id="core" cx="78%" cy="32%" r="48%">
+      <stop offset="0%" stop-color="#7aa2f7" stop-opacity="0.42"/>
+      <stop offset="35%" stop-color="#7dcfff" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#1a1b26" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="core2" cx="18%" cy="78%" r="36%">
+      <stop offset="0%" stop-color="#7dcfff" stop-opacity="0.18"/>
       <stop offset="100%" stop-color="#1a1b26" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#c0caf5"/>
-      <stop offset="55%" stop-color="#7aa2f7"/>
+      <stop offset="50%" stop-color="#7aa2f7"/>
       <stop offset="100%" stop-color="#7dcfff"/>
     </linearGradient>
-    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="18" result="b"/>
-      <feMerge>
-        <feMergeNode in="b"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7aa2f7" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#7aa2f7" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#7aa2f7" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="22" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <clipPath id="frame">
-      <rect width="1100" height="260" rx="28"/>
-    </clipPath>
+    <filter id="ringGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="frame"><rect width="1200" height="320" rx="32"/></clipPath>
   </defs>
-
   <g clip-path="url(#frame)">
-    <rect width="1100" height="260" fill="url(#bg)"/>
-
-    <!-- Breathing light core -->
+    <rect width="1200" height="320" fill="url(#bg)"/>
     <g filter="url(#softGlow)">
-      <circle cx="790" cy="100" r="110" fill="url(#core)">
-        <animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" repeatCount="indefinite"/>
+      <circle cx="920" cy="110" r="150" fill="url(#core)">
+        <animate attributeName="opacity" values="0.45;1;0.45" dur="4.8s" repeatCount="indefinite"/>
       </circle>
-      <circle cx="790" cy="100" r="46" fill="#7aa2f7" opacity="0.18">
-        <animate attributeName="opacity" values="0.12;0.28;0.12" dur="4.2s" repeatCount="indefinite"/>
-        <animate attributeName="r" values="40;52;40" dur="4.2s" repeatCount="indefinite"/>
+      <circle cx="920" cy="110" r="58" fill="#7aa2f7" opacity="0.22">
+        <animate attributeName="opacity" values="0.12;0.34;0.12" dur="4.8s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="48;68;48" dur="4.8s" repeatCount="indefinite"/>
       </circle>
     </g>
-
-    <!-- Quiet secondary glow -->
-    <circle cx="180" cy="200" r="70" fill="#7dcfff" opacity="0.05">
-      <animate attributeName="opacity" values="0.03;0.08;0.03" dur="5.4s" repeatCount="indefinite"/>
+    <circle cx="160" cy="250" r="90" fill="url(#core2)">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="6.2s" repeatCount="indefinite"/>
     </circle>
-
-    <!-- Sparse contribution cells — clinical, not busy -->
-    <g transform="translate(56, 42)" opacity="0.9">
-      <g fill="#1f2335">
-        <rect x="0" y="0" width="10" height="10" rx="2"/><rect x="14" y="0" width="10" height="10" rx="2"/><rect x="28" y="0" width="10" height="10" rx="2"/><rect x="42" y="0" width="10" height="10" rx="2"/><rect x="56" y="0" width="10" height="10" rx="2"/><rect x="70" y="0" width="10" height="10" rx="2"/><rect x="84" y="0" width="10" height="10" rx="2"/><rect x="98" y="0" width="10" height="10" rx="2"/><rect x="112" y="0" width="10" height="10" rx="2"/><rect x="126" y="0" width="10" height="10" rx="2"/>
-        <rect x="0" y="14" width="10" height="10" rx="2"/><rect x="14" y="14" width="10" height="10" rx="2"/><rect x="28" y="14" width="10" height="10" rx="2"/><rect x="42" y="14" width="10" height="10" rx="2"/><rect x="56" y="14" width="10" height="10" rx="2"/><rect x="70" y="14" width="10" height="10" rx="2"/><rect x="84" y="14" width="10" height="10" rx="2"/><rect x="98" y="14" width="10" height="10" rx="2"/><rect x="112" y="14" width="10" height="10" rx="2"/><rect x="126" y="14" width="10" height="10" rx="2"/>
-        <rect x="0" y="28" width="10" height="10" rx="2"/><rect x="14" y="28" width="10" height="10" rx="2"/><rect x="28" y="28" width="10" height="10" rx="2"/><rect x="42" y="28" width="10" height="10" rx="2"/><rect x="56" y="28" width="10" height="10" rx="2"/><rect x="70" y="28" width="10" height="10" rx="2"/><rect x="84" y="28" width="10" height="10" rx="2"/><rect x="98" y="28" width="10" height="10" rx="2"/><rect x="112" y="28" width="10" height="10" rx="2"/><rect x="126" y="28" width="10" height="10" rx="2"/>
-        <rect x="0" y="42" width="10" height="10" rx="2"/><rect x="14" y="42" width="10" height="10" rx="2"/><rect x="28" y="42" width="10" height="10" rx="2"/><rect x="42" y="42" width="10" height="10" rx="2"/><rect x="56" y="42" width="10" height="10" rx="2"/><rect x="70" y="42" width="10" height="10" rx="2"/><rect x="84" y="42" width="10" height="10" rx="2"/><rect x="98" y="42" width="10" height="10" rx="2"/><rect x="112" y="42" width="10" height="10" rx="2"/><rect x="126" y="42" width="10" height="10" rx="2"/>
-      </g>
-      <rect x="28" y="0" width="10" height="10" rx="2" fill="#7aa2f7"><animate attributeName="opacity" values="0.35;1;0.35" dur="3.8s" repeatCount="indefinite"/></rect>
-      <rect x="70" y="14" width="10" height="10" rx="2" fill="#7dcfff"><animate attributeName="opacity" values="0.3;1;0.3" dur="4.6s" repeatCount="indefinite"/></rect>
-      <rect x="98" y="28" width="10" height="10" rx="2" fill="#7aa2f7"><animate attributeName="opacity" values="0.4;1;0.4" dur="5.1s" repeatCount="indefinite"/></rect>
-      <rect x="42" y="42" width="10" height="10" rx="2" fill="#9ece6a"><animate attributeName="opacity" values="0.35;0.95;0.35" dur="4.2s" repeatCount="indefinite"/></rect>
-      <rect x="112" y="14" width="10" height="10" rx="2" fill="#7dcfff"><animate attributeName="opacity" values="0.25;0.9;0.25" dur="5.6s" repeatCount="indefinite"/></rect>
+    <g filter="url(#ringGlow)" transform="translate(920,110)" opacity="0.55">
+      <ellipse cx="0" cy="0" rx="92" ry="36" fill="none" stroke="#7aa2f7" stroke-width="1.2" opacity="0.55">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="18s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.3;0.7;0.3" dur="4.8s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="0" cy="0" rx="68" ry="24" fill="none" stroke="#7dcfff" stroke-width="0.8" opacity="0.4">
+        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="12s" repeatCount="indefinite"/>
+      </ellipse>
     </g>
-
-    <!-- Soft horizon line -->
-    <path fill="#7aa2f7" opacity="0.06" d="M0 198 C 180 176, 320 214, 500 190 C 680 166, 860 210, 1100 184 L 1100 260 L 0 260 Z">
-      <animate attributeName="opacity" values="0.04;0.09;0.04" dur="5s" repeatCount="indefinite"/>
+    <rect x="0" width="1200" height="48" fill="url(#scan)">
+      <animate attributeName="y" values="-48;320" dur="7.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.9;0" keyTimes="0;0.5;1" dur="7.5s" repeatCount="indefinite"/>
+    </rect>
+    <g transform="translate(64, 48)" opacity="0.95">
+      <g fill="#1f2335">
+        <rect x="0" y="0" width="11" height="11" rx="2"/>
+        <rect x="15" y="0" width="11" height="11" rx="2"/>
+        <rect x="30" y="0" width="11" height="11" rx="2"/>
+        <rect x="45" y="0" width="11" height="11" rx="2"/>
+        <rect x="60" y="0" width="11" height="11" rx="2"/>
+        <rect x="75" y="0" width="11" height="11" rx="2"/>
+        <rect x="90" y="0" width="11" height="11" rx="2"/>
+        <rect x="105" y="0" width="11" height="11" rx="2"/>
+        <rect x="120" y="0" width="11" height="11" rx="2"/>
+        <rect x="135" y="0" width="11" height="11" rx="2"/>
+        <rect x="150" y="0" width="11" height="11" rx="2"/>
+        <rect x="0" y="15" width="11" height="11" rx="2"/>
+        <rect x="15" y="15" width="11" height="11" rx="2"/>
+        <rect x="30" y="15" width="11" height="11" rx="2"/>
+        <rect x="45" y="15" width="11" height="11" rx="2"/>
+        <rect x="60" y="15" width="11" height="11" rx="2"/>
+        <rect x="75" y="15" width="11" height="11" rx="2"/>
+        <rect x="90" y="15" width="11" height="11" rx="2"/>
+        <rect x="105" y="15" width="11" height="11" rx="2"/>
+        <rect x="120" y="15" width="11" height="11" rx="2"/>
+        <rect x="135" y="15" width="11" height="11" rx="2"/>
+        <rect x="150" y="15" width="11" height="11" rx="2"/>
+        <rect x="0" y="30" width="11" height="11" rx="2"/>
+        <rect x="15" y="30" width="11" height="11" rx="2"/>
+        <rect x="30" y="30" width="11" height="11" rx="2"/>
+        <rect x="45" y="30" width="11" height="11" rx="2"/>
+        <rect x="60" y="30" width="11" height="11" rx="2"/>
+        <rect x="75" y="30" width="11" height="11" rx="2"/>
+        <rect x="90" y="30" width="11" height="11" rx="2"/>
+        <rect x="105" y="30" width="11" height="11" rx="2"/>
+        <rect x="120" y="30" width="11" height="11" rx="2"/>
+        <rect x="135" y="30" width="11" height="11" rx="2"/>
+        <rect x="150" y="30" width="11" height="11" rx="2"/>
+        <rect x="0" y="45" width="11" height="11" rx="2"/>
+        <rect x="15" y="45" width="11" height="11" rx="2"/>
+        <rect x="30" y="45" width="11" height="11" rx="2"/>
+        <rect x="45" y="45" width="11" height="11" rx="2"/>
+        <rect x="60" y="45" width="11" height="11" rx="2"/>
+        <rect x="75" y="45" width="11" height="11" rx="2"/>
+        <rect x="90" y="45" width="11" height="11" rx="2"/>
+        <rect x="105" y="45" width="11" height="11" rx="2"/>
+        <rect x="120" y="45" width="11" height="11" rx="2"/>
+        <rect x="135" y="45" width="11" height="11" rx="2"/>
+        <rect x="150" y="45" width="11" height="11" rx="2"/>
+        <rect x="0" y="60" width="11" height="11" rx="2"/>
+        <rect x="15" y="60" width="11" height="11" rx="2"/>
+        <rect x="30" y="60" width="11" height="11" rx="2"/>
+        <rect x="45" y="60" width="11" height="11" rx="2"/>
+        <rect x="60" y="60" width="11" height="11" rx="2"/>
+        <rect x="75" y="60" width="11" height="11" rx="2"/>
+        <rect x="90" y="60" width="11" height="11" rx="2"/>
+        <rect x="105" y="60" width="11" height="11" rx="2"/>
+        <rect x="120" y="60" width="11" height="11" rx="2"/>
+        <rect x="135" y="60" width="11" height="11" rx="2"/>
+        <rect x="150" y="60" width="11" height="11" rx="2"/>
+      </g>
+      <rect x="30" y="0" width="11" height="11" rx="2" fill="#7aa2f7"><animate attributeName="opacity" values="0.3;1;0.3" dur="3.6s" repeatCount="indefinite"/></rect>
+      <rect x="75" y="15" width="11" height="11" rx="2" fill="#7dcfff"><animate attributeName="opacity" values="0.25;1;0.25" dur="4.4s" repeatCount="indefinite"/></rect>
+      <rect x="105" y="30" width="11" height="11" rx="2" fill="#7aa2f7"><animate attributeName="opacity" values="0.35;1;0.35" dur="5s" repeatCount="indefinite"/></rect>
+      <rect x="45" y="45" width="11" height="11" rx="2" fill="#9ece6a"><animate attributeName="opacity" values="0.3;0.95;0.3" dur="4.1s" repeatCount="indefinite"/></rect>
+      <rect x="120" y="15" width="11" height="11" rx="2" fill="#7dcfff"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="5.5s" repeatCount="indefinite"/></rect>
+      <rect x="150" y="60" width="11" height="11" rx="2" fill="#7aa2f7"><animate attributeName="opacity" values="0.25;0.85;0.25" dur="4.7s" repeatCount="indefinite"/></rect>
+      <rect x="15" y="30" width="11" height="11" rx="2" fill="#7dcfff"><animate attributeName="opacity" values="0.2;0.8;0.2" dur="6s" repeatCount="indefinite"/></rect>
+    </g>
+    <path fill="#7aa2f7" opacity="0.07" d="M0 242 C 200 214, 360 268, 560 236 C 760 204, 960 258, 1200 228 L 1200 320 L 0 320 Z">
+      <animate attributeName="opacity" values="0.04;0.11;0.04" dur="5.4s" repeatCount="indefinite"/>
     </path>
-
-    <text x="550" y="122" text-anchor="middle" font-family="ui-sans-serif, 'Segoe UI', 'PingFang SC', sans-serif" font-size="64" font-weight="700" fill="url(#title)" letter-spacing="12">NOAH</text>
-    <text x="550" y="158" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="16" fill="#7aa2f7" letter-spacing="3" opacity="0.95">webywz · contributions that breathe</text>
-    <text x="550" y="186" text-anchor="middle" font-family="'PingFang SC', 'Noto Sans SC', 'Segoe UI', sans-serif" font-size="14" fill="#565f89" letter-spacing="2">把贡献变成会呼吸的东西</text>
+    <text x="600" y="148" text-anchor="middle" font-family="ui-sans-serif, 'Segoe UI', 'PingFang SC', sans-serif" font-size="78" font-weight="700" fill="url(#title)" letter-spacing="14">NOAH</text>
+    <text x="600" y="188" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="17" fill="#7aa2f7" letter-spacing="3.5" opacity="0.95">webywz · contributions that breathe</text>
+    <text x="600" y="218" text-anchor="middle" font-family="'PingFang SC', 'Noto Sans SC', 'Segoe UI', sans-serif" font-size="15" fill="#565f89" letter-spacing="2.5">把贡献变成会呼吸的东西</text>
+    <g transform="translate(600, 248)">
+      <rect x="-78" y="-12" width="156" height="24" rx="12" fill="#16161e" stroke="#7aa2f7" stroke-opacity="0.35"/>
+      <circle cx="-58" cy="0" r="4" fill="#9ece6a">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2.2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="6" y="5" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#a9b1d6" letter-spacing="1.5">CLINICAL · NEON · LIVE</text>
+    </g>
   </g>
 </svg>

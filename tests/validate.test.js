@@ -186,16 +186,28 @@ function testReadmeStructure() {
   assert(readme.includes('assets/stats.svg'), 'README 使用本地 stats SVG');
   assert(readme.includes('assets/langs.svg'), 'README 使用本地 langs SVG');
   assert(readme.includes('assets/aquarium.svg'), 'README 嵌入本地贡献水族箱 SVG');
+  assert(readme.includes('assets/wall-header.svg'), 'README 含产品墙呼吸标题条');
+  assert(readme.includes('assets/card-chrome.svg'), 'README 产品卡含微光 chrome');
+  assert(readme.includes('assets/mid-breath.svg'), 'README 含中段呼吸分隔');
+  assert(readme.includes('assets/stack-strip.svg'), 'README 含动效技术栈条');
+  assert(readme.includes('assets/social-strip.svg'), 'README 含页脚社交灯条');
+  assert(readme.includes('assets/divider-breath.svg'), 'README 含呼吸分隔线');
   assert(
     readme.includes('贡献水族箱') || readme.includes('水族馆'),
     'README 用中文说明水族箱'
   );
   const bannerIdx = readme.indexOf('assets/banner.svg');
+  const wallIdx = readme.indexOf('assets/wall-header.svg');
   const aquariumIdx = readme.indexOf('assets/aquarium.svg');
+  const stackIdx = readme.indexOf('assets/stack-strip.svg');
+  const socialIdx = readme.indexOf('assets/social-strip.svg');
   const projectsIdx = readme.indexOf('<!--PROJECTS:START-->');
   assert(bannerIdx !== -1 && aquariumIdx !== -1, '横幅与水族箱路径都存在');
-  assert(bannerIdx < aquariumIdx, '水族箱出现在横幅之后');
+  assert(bannerIdx < wallIdx, '产品墙在横幅之后');
+  assert(wallIdx < aquariumIdx, '水族箱作为中段呼吸在产品墙之后');
   assert(aquariumIdx < projectsIdx, '水族箱出现在精选项目之前');
+  assert(stackIdx !== -1 && stackIdx < wallIdx, '技术栈条出现在产品墙之前（Hero 区）');
+  assert(socialIdx !== -1 && socialIdx > projectsIdx, '社交灯条在页脚');
   assert(!readme.includes('badge/-TypeScript'), 'README 不再是技术栈徽章墙');
   assert(!readme.includes('github-readme-stats.vercel.app'), '不依赖已暂停的 vercel stats 部署');
 }
@@ -361,6 +373,28 @@ function testGeneratedSvgs() {
     bannerText.startsWith('<?xml') && bannerText.includes('encoding="UTF-8"'),
     'banner.svg 声明 UTF-8，避免当作图片时解码失败'
   );
+  assert(bannerText.includes('<animate'), 'banner.svg 含呼吸动画');
+  assert(bannerText.includes('#7aa2f7'), 'banner.svg 使用 tokyo-night 青蓝');
+  assert(!bannerText.includes('#bb9af7'), 'banner.svg 无紫粉 AI 主色');
+  const terminalPath = join(ROOT_DIR, 'assets', 'terminal-flex.svg');
+  assert(existsSync(terminalPath), 'terminal-flex.svg 存在');
+  const terminal = readFileSync(terminalPath, 'utf-8');
+  assert(terminal.includes('npx contrib-aquarium'), 'terminal-flex 展示 aquarium 命令');
+  assert(terminal.includes('<animate'), 'terminal-flex 含打字机/光标动画');
+  for (const name of [
+    'card-chrome.svg',
+    'wall-header.svg',
+    'mid-breath.svg',
+    'stack-strip.svg',
+    'social-strip.svg',
+    'divider-breath.svg'
+  ]) {
+    const p = join(ROOT_DIR, 'assets', name);
+    assert(existsSync(p), `${name} 存在`);
+    const svg = readFileSync(p, 'utf-8');
+    assert(svg.includes('<svg'), `${name} 是 SVG`);
+    assert(svg.includes('<animate') || svg.includes('animateTransform'), `${name} 含呼吸动效`);
+  }
   assert(existsSync(statsPath), 'stats.svg 存在');
   assert(existsSync(langsPath), 'langs.svg 存在');
 

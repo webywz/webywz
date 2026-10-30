@@ -1,52 +1,46 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="Noah · webywz · contributions that breathe" width="880" height="208" />
+<img src="assets/banner.svg" alt="Noah · webywz · contributions that breathe" width="960" height="256" />
 
 **Turn contributions into something that breathes.**  
 **把贡献变成会呼吸的东西。**
 
-<img src="assets/terminal-flex.svg" alt="npx contrib-aquarium" width="720" height="46" />
+<img src="assets/terminal-flex.svg" alt="npx contrib-aquarium — living SVG from your contribution graph" width="860" height="79" />
 
 [![GitHub followers](https://img.shields.io/github/followers/webywz?style=flat-square&logo=github&color=7aa2f7&labelColor=1a1b26)](https://github.com/webywz)
 [![Profile Views](https://komarev.com/ghpvc/?username=webywz&style=flat-square&color=7aa2f7&label=profile+views)](https://github.com/webywz)
 
-`TypeScript` · `Python` · `NestJS` · `FastAPI` · `Vue` · `Electron` · `AI Workflows`
+<img src="assets/stack-strip.svg" alt="Stack · TypeScript Python NestJS FastAPI Vue Electron AI" width="860" height="62" />
 
 </div>
 
----
+<img src="assets/divider-breath.svg" alt="" width="880" height="12" />
 
 Gateways and desktop tools by day; contribution graphs that swim by night. Commits, PRs, and prompts ship as CLIs you can run. No stack parade, no badge wall — only things meant to be used.
 
 白天写网关和桌面工具，晚上让贡献图游进水族馆。commit、PR、prompt 也做成能直接用的 CLI。不堆栈，不堆徽章——只把真正想给人用的东西放在第一屏。
 
-## Contribution aquarium · 贡献水族箱
-
-This tank is redrawn daily by [contrib-aquarium](https://github.com/webywz/contrib-aquarium) from my GitHub contribution calendar: commits become schools of fish, streaks grow kelp, recent activity lifts bubbles.
-
-这座缸由 [contrib-aquarium](https://github.com/webywz/contrib-aquarium) 根据我的 GitHub 贡献日历每天重画：提交变成鱼群，连续打卡撑起海藻，近两周活跃则冒出气泡。
-
-<p align="center">
-  <a href="https://github.com/webywz/contrib-aquarium">
-    <img src="assets/aquarium.svg" width="860" alt="webywz contribution aquarium — commits as fish, streaks as kelp" />
-  </a>
-</p>
-
 ## ✨ 亮点 Demo · 产品墙 / Product wall
 
-One outcome per cell. Copy the command and go.
+<p align="center">
+  <img src="assets/wall-header.svg" alt="Product wall · 产品墙" width="880" height="48" />
+</p>
 
-一格一件事。复制命令就能跑。
+One outcome per cell. Copy the command and go. Each card carries a micro breathing chrome.
+
+一格一件事。复制命令就能跑。每张卡带一点会呼吸的微光边。
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
+<img src="assets/card-chrome.svg" alt="" width="100%" height="14" />
+
 ### [contrib-aquarium](https://github.com/webywz/contrib-aquarium)
 
-A year of commits, rendered as a living SVG aquarium. The tank above is what it paints for this profile every day.
+A year of commits, rendered as a living SVG aquarium. The tank below is what it paints for this profile every day.
 
-一年的 commit 变成一座会呼吸的 SVG 水族馆。上面那座缸就是它每天给这份主页画的。
+一年的 commit 变成一座会呼吸的 SVG 水族馆。下面那座缸就是它每天给这份主页画的。
 
 ```bash
 npx contrib-aquarium
@@ -54,6 +48,8 @@ npx contrib-aquarium
 
 </td>
 <td width="50%" valign="top">
+
+<img src="assets/card-chrome.svg" alt="" width="100%" height="14" />
 
 ### [vibe-commit](https://github.com/webywz/vibe-commit)
 
@@ -70,6 +66,8 @@ npx @webywz/vibe-commit
 <tr>
 <td width="50%" valign="top">
 
+<img src="assets/card-chrome.svg" alt="" width="100%" height="14" />
+
 ### [agent-trace](https://github.com/webywz/agent-trace)
 
 Messy agent run logs become a readable timeline — filter, stats, Markdown & Mermaid.
@@ -82,6 +80,8 @@ npx @webywz/agent-trace
 
 </td>
 <td width="50%" valign="top">
+
+<img src="assets/card-chrome.svg" alt="" width="100%" height="14" />
 
 ### [eval-smoke](https://github.com/webywz/eval-smoke)
 
@@ -98,6 +98,8 @@ npx @webywz/eval-smoke
 <tr>
 <td width="50%" valign="top">
 
+<img src="assets/card-chrome.svg" alt="" width="100%" height="14" />
+
 ### [diff-vibe](https://github.com/webywz/diff-vibe)
 
 A git diff becomes a paste-ready PR title and body. Offline heuristic first; AI only when a key is set.
@@ -110,6 +112,8 @@ npx @webywz/diff-vibe
 
 </td>
 <td width="50%" valign="top">
+
+<img src="assets/card-chrome.svg" alt="" width="100%" height="14" />
 
 ### [context-diet](https://github.com/webywz/context-diet)
 
@@ -124,6 +128,22 @@ npx @webywz/context-diet
 </td>
 </tr>
 </table>
+
+## Contribution aquarium · 贡献水族箱
+
+<p align="center">
+  <img src="assets/mid-breath.svg" alt="Mid breath · aquarium" width="880" height="36" />
+</p>
+
+Second breath layer — quieter than the hero. This tank is redrawn daily by [contrib-aquarium](https://github.com/webywz/contrib-aquarium) from my GitHub contribution calendar: commits become schools of fish, streaks grow kelp, recent activity lifts bubbles.
+
+第二层呼吸，比 Hero 更克制。这座缸由 [contrib-aquarium](https://github.com/webywz/contrib-aquarium) 根据我的 GitHub 贡献日历每天重画：提交变成鱼群，连续打卡撑起海藻，近两周活跃则冒出气泡。
+
+<p align="center">
+  <a href="https://github.com/webywz/contrib-aquarium">
+    <img src="assets/aquarium.svg" width="860" alt="webywz contribution aquarium — commits as fish, streaks as kelp" />
+  </a>
+</p>
 
 ## Also shipping · 更多项目
 
@@ -237,6 +257,10 @@ Driven by [breathing-github-profile](https://github.com/webywz/breathing-github-
 ---
 
 <div align="center">
+
+<img src="assets/social-strip.svg" alt="github.com/webywz · aquarium · vibe-commit · diff-vibe" width="860" height="52" />
+
+<br/>
 
 Watch contributions swim in the [aquarium](https://github.com/webywz/contrib-aquarium). Commits with [vibe-commit](https://github.com/webywz/vibe-commit); PRs with [diff-vibe](https://github.com/webywz/diff-vibe).
 

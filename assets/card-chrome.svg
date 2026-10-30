@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="14" viewBox="0 0 420 14" role="img" aria-label="breathing card chrome">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7aa2f7" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#7dcfff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#7aa2f7" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="14" rx="7" fill="#16161e"/>
+  <rect x="8" y="5" width="404" height="4" rx="2" fill="#1f2335"/>
+  <rect x="8" y="5" width="404" height="4" rx="2" fill="url(#g)">
+    <animate attributeName="opacity" values="0.35;1;0.35" dur="3.8s" repeatCount="indefinite"/>
+  </rect>
+  <circle cx="24" cy="7" r="2.5" fill="#7aa2f7">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="3.8s" repeatCount="indefinite"/>
+  </circle>
+</svg>

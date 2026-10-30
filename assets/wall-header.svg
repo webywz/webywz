@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="48" viewBox="0 0 880 48" role="img" aria-label="Product wall · 产品墙">
+  <defs>
+    <linearGradient id="wbg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a1b26"/>
+      <stop offset="50%" stop-color="#16161e"/>
+      <stop offset="100%" stop-color="#1a1b26"/>
+    </linearGradient>
+    <linearGradient id="wg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7aa2f7" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#7aa2f7" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#7aa2f7" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="880" height="48" rx="12" fill="url(#wbg)"/>
+  <rect x="40" y="22" width="200" height="2" rx="1" fill="url(#wg)">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="4.5s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="640" y="22" width="200" height="2" rx="1" fill="url(#wg)">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="4.5s" repeatCount="indefinite"/>
+  </rect>
+  <text x="440" y="30" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="13" fill="#7aa2f7" letter-spacing="3">PRODUCT WALL · 产品墙</text>
+</svg>
