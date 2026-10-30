@@ -167,7 +167,9 @@ function testReadmeStructure() {
     'agent-trace',
     'eval-smoke',
     'diff-vibe',
-    'context-diet'
+    'context-diet',
+    'llm-roast',
+    'prompt-diff'
   ]) {
     assert(
       highlightSection.includes(`https://github.com/webywz/${name}`),
@@ -176,8 +178,8 @@ function testReadmeStructure() {
   }
   assert(highlightSection.includes('<table>'), '亮点 Demo 使用双列表格卡片');
   assert(
-    (highlightSection.match(/<tr>/g) || []).length >= 2,
-    '亮点 Demo 至少两行（2×2）'
+    (highlightSection.match(/<tr>/g) || []).length >= 4,
+    '亮点 Demo 至少四行（4×2）'
   );
   assert(
     highlightSection.includes('assets/product-contrib-aquarium.svg'),
@@ -185,7 +187,7 @@ function testReadmeStructure() {
   );
   assert(
     PRODUCT_WALL.every((p) => highlightSection.includes(`assets/product-${p.name}.svg`)),
-    '产品墙六张 SVG 卡齐全'
+    '产品墙八张 SVG 卡齐全'
   );
   assert(readme.includes('产品墙') || readme.includes('Product wall'), '亮点区标注产品墙');
   assert(readme.includes('assets/terminal-flex.svg'), 'README 含克制伪终端 SVG');
@@ -359,7 +361,7 @@ function testProjectCards() {
 
   const wallMd = generateProductWallMarkdown();
   assert(wallMd.includes('product-contrib-aquarium.svg'), '产品墙 markdown 引用 product SVG');
-  assert(PRODUCT_WALL.length === 6, '产品墙固定 6 卡');
+  assert(PRODUCT_WALL.length === 8, '产品墙固定 8 卡');
   const productSvg = renderProductCardSvg(PRODUCT_WALL[0]);
   assert(productSvg.includes('npx contrib-aquarium'), '产品卡含轻量终端 npx');
   assert(productSvg.includes('<animate'), '产品卡含呼吸微光');
