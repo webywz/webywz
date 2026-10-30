@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="260" viewBox="0 0 1100 260" role="img" aria-label="Noah · webywz">
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="260" viewBox="0 0 1100 260" role="img" aria-label="Noah · webywz · contributions that breathe">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0b0f19"/>
-      <stop offset="48%" stop-color="#12182a"/>
-      <stop offset="100%" stop-color="#1a1430"/>
+      <stop offset="55%" stop-color="#12182a"/>
+      <stop offset="100%" stop-color="#1a1b26"/>
     </linearGradient>
-    <linearGradient id="wave" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7dcfff" stop-opacity="0.22"/>
-      <stop offset="100%" stop-color="#bb9af7" stop-opacity="0.06"/>
-    </linearGradient>
+    <radialGradient id="core" cx="72%" cy="38%" r="42%">
+      <stop offset="0%" stop-color="#7aa2f7" stop-opacity="0.28"/>
+      <stop offset="45%" stop-color="#7dcfff" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#1a1b26" stop-opacity="0"/>
+    </radialGradient>
     <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#e8ecff"/>
-      <stop offset="55%" stop-color="#7dcfff"/>
-      <stop offset="100%" stop-color="#bb9af7"/>
+      <stop offset="0%" stop-color="#c0caf5"/>
+      <stop offset="55%" stop-color="#7aa2f7"/>
+      <stop offset="100%" stop-color="#7dcfff"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="5" result="b"/>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="18" result="b"/>
       <feMerge>
         <feMergeNode in="b"/>
         <feMergeNode in="SourceGraphic"/>
@@ -29,44 +30,45 @@
 
   <g clip-path="url(#frame)">
     <rect width="1100" height="260" fill="url(#bg)"/>
-    <circle cx="980" cy="40" r="120" fill="#7aa2f7" opacity="0.07"/>
-    <circle cx="160" cy="210" r="90" fill="#7dcfff" opacity="0.06"/>
 
-    <!-- mini contribution graph -->
-    <g transform="translate(48, 34)" opacity="0.95">
-      <g fill="#1b2438">
-        <rect x="0" y="0" width="11" height="11" rx="2"/><rect x="16" y="0" width="11" height="11" rx="2"/><rect x="32" y="0" width="11" height="11" rx="2"/><rect x="48" y="0" width="11" height="11" rx="2"/><rect x="64" y="0" width="11" height="11" rx="2"/><rect x="80" y="0" width="11" height="11" rx="2"/><rect x="96" y="0" width="11" height="11" rx="2"/><rect x="112" y="0" width="11" height="11" rx="2"/><rect x="128" y="0" width="11" height="11" rx="2"/><rect x="144" y="0" width="11" height="11" rx="2"/><rect x="160" y="0" width="11" height="11" rx="2"/><rect x="176" y="0" width="11" height="11" rx="2"/><rect x="192" y="0" width="11" height="11" rx="2"/><rect x="208" y="0" width="11" height="11" rx="2"/>
-        <rect x="0" y="16" width="11" height="11" rx="2"/><rect x="16" y="16" width="11" height="11" rx="2"/><rect x="32" y="16" width="11" height="11" rx="2"/><rect x="48" y="16" width="11" height="11" rx="2"/><rect x="64" y="16" width="11" height="11" rx="2"/><rect x="80" y="16" width="11" height="11" rx="2"/><rect x="96" y="16" width="11" height="11" rx="2"/><rect x="112" y="16" width="11" height="11" rx="2"/><rect x="128" y="16" width="11" height="11" rx="2"/><rect x="144" y="16" width="11" height="11" rx="2"/><rect x="160" y="16" width="11" height="11" rx="2"/><rect x="176" y="16" width="11" height="11" rx="2"/><rect x="192" y="16" width="11" height="11" rx="2"/><rect x="208" y="16" width="11" height="11" rx="2"/>
-        <rect x="0" y="32" width="11" height="11" rx="2"/><rect x="16" y="32" width="11" height="11" rx="2"/><rect x="32" y="32" width="11" height="11" rx="2"/><rect x="48" y="32" width="11" height="11" rx="2"/><rect x="64" y="32" width="11" height="11" rx="2"/><rect x="80" y="32" width="11" height="11" rx="2"/><rect x="96" y="32" width="11" height="11" rx="2"/><rect x="112" y="32" width="11" height="11" rx="2"/><rect x="128" y="32" width="11" height="11" rx="2"/><rect x="144" y="32" width="11" height="11" rx="2"/><rect x="160" y="32" width="11" height="11" rx="2"/><rect x="176" y="32" width="11" height="11" rx="2"/><rect x="192" y="32" width="11" height="11" rx="2"/><rect x="208" y="32" width="11" height="11" rx="2"/>
-        <rect x="0" y="48" width="11" height="11" rx="2"/><rect x="16" y="48" width="11" height="11" rx="2"/><rect x="32" y="48" width="11" height="11" rx="2"/><rect x="48" y="48" width="11" height="11" rx="2"/><rect x="64" y="48" width="11" height="11" rx="2"/><rect x="80" y="48" width="11" height="11" rx="2"/><rect x="96" y="48" width="11" height="11" rx="2"/><rect x="112" y="48" width="11" height="11" rx="2"/><rect x="128" y="48" width="11" height="11" rx="2"/><rect x="144" y="48" width="11" height="11" rx="2"/><rect x="160" y="48" width="11" height="11" rx="2"/><rect x="176" y="48" width="11" height="11" rx="2"/><rect x="192" y="48" width="11" height="11" rx="2"/><rect x="208" y="48" width="11" height="11" rx="2"/>
-        <rect x="0" y="64" width="11" height="11" rx="2"/><rect x="16" y="64" width="11" height="11" rx="2"/><rect x="32" y="64" width="11" height="11" rx="2"/><rect x="48" y="64" width="11" height="11" rx="2"/><rect x="64" y="64" width="11" height="11" rx="2"/><rect x="80" y="64" width="11" height="11" rx="2"/><rect x="96" y="64" width="11" height="11" rx="2"/><rect x="112" y="64" width="11" height="11" rx="2"/><rect x="128" y="64" width="11" height="11" rx="2"/><rect x="144" y="64" width="11" height="11" rx="2"/><rect x="160" y="64" width="11" height="11" rx="2"/><rect x="176" y="64" width="11" height="11" rx="2"/><rect x="192" y="64" width="11" height="11" rx="2"/><rect x="208" y="64" width="11" height="11" rx="2"/>
-      </g>
-      <rect x="32" y="0" width="11" height="11" rx="2" fill="#9ece6a"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.4s" repeatCount="indefinite"/></rect>
-      <rect x="80" y="16" width="11" height="11" rx="2" fill="#7dcfff"><animate attributeName="opacity" values="0.35;1;0.35" dur="4.1s" repeatCount="indefinite"/></rect>
-      <rect x="96" y="48" width="11" height="11" rx="2" fill="#bb9af7"><animate attributeName="opacity" values="0.4;1;0.4" dur="5s" repeatCount="indefinite"/></rect>
-      <rect x="128" y="32" width="11" height="11" rx="2" fill="#7aa2f7"><animate attributeName="opacity" values="0.3;1;0.3" dur="3.8s" repeatCount="indefinite"/></rect>
-      <rect x="160" y="0" width="11" height="11" rx="2" fill="#9ece6a"><animate attributeName="opacity" values="0.45;1;0.45" dur="4.6s" repeatCount="indefinite"/></rect>
-      <rect x="176" y="64" width="11" height="11" rx="2" fill="#7dcfff"><animate attributeName="opacity" values="0.35;1;0.35" dur="5.4s" repeatCount="indefinite"/></rect>
-      <rect x="208" y="16" width="11" height="11" rx="2" fill="#bb9af7"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.2s" repeatCount="indefinite"/></rect>
-      <rect x="48" y="64" width="11" height="11" rx="2" fill="#73daca"><animate attributeName="opacity" values="0.35;1;0.35" dur="6s" repeatCount="indefinite"/></rect>
+    <!-- Breathing light core -->
+    <g filter="url(#softGlow)">
+      <circle cx="790" cy="100" r="110" fill="url(#core)">
+        <animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="790" cy="100" r="46" fill="#7aa2f7" opacity="0.18">
+        <animate attributeName="opacity" values="0.12;0.28;0.12" dur="4.2s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="40;52;40" dur="4.2s" repeatCount="indefinite"/>
+      </circle>
     </g>
 
-    <path fill="url(#wave)" d="M0 188 C 150 158, 250 218, 390 186 C 530 154, 650 214, 790 182 C 930 150, 1020 198, 1100 172 L 1100 260 L 0 260 Z">
-      <animate attributeName="d" dur="9s" repeatCount="indefinite" values="
-        M0 188 C 150 158, 250 218, 390 186 C 530 154, 650 214, 790 182 C 930 150, 1020 198, 1100 172 L 1100 260 L 0 260 Z;
-        M0 176 C 140 214, 260 148, 400 184 C 540 220, 660 156, 800 192 C 940 228, 1030 148, 1100 180 L 1100 260 L 0 260 Z;
-        M0 188 C 150 158, 250 218, 390 186 C 530 154, 650 214, 790 182 C 930 150, 1020 198, 1100 172 L 1100 260 L 0 260 Z"/>
+    <!-- Quiet secondary glow -->
+    <circle cx="180" cy="200" r="70" fill="#7dcfff" opacity="0.05">
+      <animate attributeName="opacity" values="0.03;0.08;0.03" dur="5.4s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Sparse contribution cells — clinical, not busy -->
+    <g transform="translate(56, 42)" opacity="0.9">
+      <g fill="#1f2335">
+        <rect x="0" y="0" width="10" height="10" rx="2"/><rect x="14" y="0" width="10" height="10" rx="2"/><rect x="28" y="0" width="10" height="10" rx="2"/><rect x="42" y="0" width="10" height="10" rx="2"/><rect x="56" y="0" width="10" height="10" rx="2"/><rect x="70" y="0" width="10" height="10" rx="2"/><rect x="84" y="0" width="10" height="10" rx="2"/><rect x="98" y="0" width="10" height="10" rx="2"/><rect x="112" y="0" width="10" height="10" rx="2"/><rect x="126" y="0" width="10" height="10" rx="2"/>
+        <rect x="0" y="14" width="10" height="10" rx="2"/><rect x="14" y="14" width="10" height="10" rx="2"/><rect x="28" y="14" width="10" height="10" rx="2"/><rect x="42" y="14" width="10" height="10" rx="2"/><rect x="56" y="14" width="10" height="10" rx="2"/><rect x="70" y="14" width="10" height="10" rx="2"/><rect x="84" y="14" width="10" height="10" rx="2"/><rect x="98" y="14" width="10" height="10" rx="2"/><rect x="112" y="14" width="10" height="10" rx="2"/><rect x="126" y="14" width="10" height="10" rx="2"/>
+        <rect x="0" y="28" width="10" height="10" rx="2"/><rect x="14" y="28" width="10" height="10" rx="2"/><rect x="28" y="28" width="10" height="10" rx="2"/><rect x="42" y="28" width="10" height="10" rx="2"/><rect x="56" y="28" width="10" height="10" rx="2"/><rect x="70" y="28" width="10" height="10" rx="2"/><rect x="84" y="28" width="10" height="10" rx="2"/><rect x="98" y="28" width="10" height="10" rx="2"/><rect x="112" y="28" width="10" height="10" rx="2"/><rect x="126" y="28" width="10" height="10" rx="2"/>
+        <rect x="0" y="42" width="10" height="10" rx="2"/><rect x="14" y="42" width="10" height="10" rx="2"/><rect x="28" y="42" width="10" height="10" rx="2"/><rect x="42" y="42" width="10" height="10" rx="2"/><rect x="56" y="42" width="10" height="10" rx="2"/><rect x="70" y="42" width="10" height="10" rx="2"/><rect x="84" y="42" width="10" height="10" rx="2"/><rect x="98" y="42" width="10" height="10" rx="2"/><rect x="112" y="42" width="10" height="10" rx="2"/><rect x="126" y="42" width="10" height="10" rx="2"/>
+      </g>
+      <rect x="28" y="0" width="10" height="10" rx="2" fill="#7aa2f7"><animate attributeName="opacity" values="0.35;1;0.35" dur="3.8s" repeatCount="indefinite"/></rect>
+      <rect x="70" y="14" width="10" height="10" rx="2" fill="#7dcfff"><animate attributeName="opacity" values="0.3;1;0.3" dur="4.6s" repeatCount="indefinite"/></rect>
+      <rect x="98" y="28" width="10" height="10" rx="2" fill="#7aa2f7"><animate attributeName="opacity" values="0.4;1;0.4" dur="5.1s" repeatCount="indefinite"/></rect>
+      <rect x="42" y="42" width="10" height="10" rx="2" fill="#9ece6a"><animate attributeName="opacity" values="0.35;0.95;0.35" dur="4.2s" repeatCount="indefinite"/></rect>
+      <rect x="112" y="14" width="10" height="10" rx="2" fill="#7dcfff"><animate attributeName="opacity" values="0.25;0.9;0.25" dur="5.6s" repeatCount="indefinite"/></rect>
+    </g>
+
+    <!-- Soft horizon line -->
+    <path fill="#7aa2f7" opacity="0.06" d="M0 198 C 180 176, 320 214, 500 190 C 680 166, 860 210, 1100 184 L 1100 260 L 0 260 Z">
+      <animate attributeName="opacity" values="0.04;0.09;0.04" dur="5s" repeatCount="indefinite"/>
     </path>
 
-    <g filter="url(#glow)">
-      <g>
-        <ellipse cx="0" cy="0" rx="16" ry="7" fill="#7dcfff" opacity="0.9"/>
-        <polygon points="-16,0 -28,-7 -28,7" fill="#7dcfff" opacity="0.85"/>
-        <animateTransform attributeName="transform" type="translate" values="910,92;1018,70;910,92" dur="10s" repeatCount="indefinite"/>
-      </g>
-    </g>
-
-    <text x="550" y="128" text-anchor="middle" font-family="ui-sans-serif, 'Segoe UI', 'PingFang SC', sans-serif" font-size="68" font-weight="700" fill="url(#title)" letter-spacing="10">NOAH</text>
-    <text x="550" y="168" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="18" fill="#89b4fa" letter-spacing="4">webywz · living workshop</text>
+    <text x="550" y="122" text-anchor="middle" font-family="ui-sans-serif, 'Segoe UI', 'PingFang SC', sans-serif" font-size="64" font-weight="700" fill="url(#title)" letter-spacing="12">NOAH</text>
+    <text x="550" y="158" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="16" fill="#7aa2f7" letter-spacing="3" opacity="0.95">webywz · contributions that breathe</text>
+    <text x="550" y="186" text-anchor="middle" font-family="'PingFang SC', 'Noto Sans SC', 'Segoe UI', sans-serif" font-size="14" fill="#565f89" letter-spacing="2">把贡献变成会呼吸的东西</text>
   </g>
 </svg>

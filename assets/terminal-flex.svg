@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="56" viewBox="0 0 880 56" role="img" aria-label="npx contrib-aquarium — living SVG from your contribution graph">
+  <defs>
+    <clipPath id="termFrame">
+      <rect width="880" height="56" rx="10"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#termFrame)">
+    <rect width="880" height="56" fill="#1a1b26"/>
+    <rect x="0" y="0" width="880" height="1" fill="#7aa2f7" opacity="0.35">
+      <animate attributeName="opacity" values="0.2;0.45;0.2" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="22" cy="28" r="4" fill="#f7768e" opacity="0.55"/>
+    <circle cx="38" cy="28" r="4" fill="#e0af68" opacity="0.55"/>
+    <circle cx="54" cy="28" r="4" fill="#9ece6a" opacity="0.55"/>
+    <text x="78" y="34" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="15" fill="#565f89">$</text>
+    <text x="96" y="34" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="15" fill="#c0caf5">npx contrib-aquarium</text>
+    <text x="292" y="34" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="14" fill="#7aa2f7" opacity="0.85">— living SVG from your contribution graph</text>
+    <rect x="848" y="18" width="8" height="20" fill="#7aa2f7">
+      <animate attributeName="opacity" values="1;0.15;1" dur="1.2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>

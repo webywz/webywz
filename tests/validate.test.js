@@ -154,7 +154,14 @@ function testReadmeStructure() {
     highlightHeading !== -1 && projectsStart !== -1
       ? readme.slice(highlightHeading, projectsStart)
       : '';
-  for (const name of ['contrib-aquarium', 'vibe-commit', 'diff-vibe', 'prompt-diff']) {
+  for (const name of [
+    'contrib-aquarium',
+    'vibe-commit',
+    'agent-trace',
+    'eval-smoke',
+    'diff-vibe',
+    'context-diet'
+  ]) {
     assert(
       highlightSection.includes(`https://github.com/webywz/${name}`),
       `亮点 Demo 包含 ${name}`
@@ -165,6 +172,15 @@ function testReadmeStructure() {
     (highlightSection.match(/<tr>/g) || []).length >= 2,
     '亮点 Demo 至少两行（2×2）'
   );
+  assert(
+    highlightSection.includes('npx contrib-aquarium') ||
+      highlightSection.includes('npx @webywz/'),
+    '产品墙包含可复制的 npx / install 命令'
+  );
+  assert(readme.includes('产品墙') || readme.includes('Product wall'), '亮点区标注产品墙');
+  assert(readme.includes('assets/terminal-flex.svg'), 'README 含克制伪终端 SVG');
+  assert(!readme.includes('readme-typing-svg.demolab.com'), '去掉 demolab typing SVG');
+  assert(!readme.includes('color=bb9af7'), 'shields 不再使用紫粉 AI 色');
   assert(readme.includes('theme=tokyonight'), '统计卡片使用 tokyonight 主题');
   assert(readme.includes('assets/banner.svg'), 'README 包含自定义横幅');
   assert(readme.includes('assets/stats.svg'), 'README 使用本地 stats SVG');
