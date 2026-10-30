@@ -3,35 +3,13 @@
     "login": "webywz",
     "name": "Shoshana Dicki",
     "bio": null,
-    "publicRepos": 20,
+    "publicRepos": 26,
     "followers": 3,
     "following": 5,
     "avatarUrl": "https://avatars.githubusercontent.com/u/37465255?v=4",
     "htmlUrl": "https://github.com/webywz"
   },
   "repos": [
-    {
-      "name": "vibe-commit",
-      "fullName": "webywz/vibe-commit",
-      "description": "One-command CLI that writes stylish, conventional commit messages with personality",
-      "htmlUrl": "https://github.com/webywz/vibe-commit",
-      "stars": 0,
-      "forks": 0,
-      "language": null,
-      "updatedAt": "2026-10-29T10:51:26Z",
-      "createdAt": "2026-10-29T10:50:49Z"
-    },
-    {
-      "name": "contrib-aquarium",
-      "fullName": "webywz/contrib-aquarium",
-      "description": "Living SVG aquarium driven by your GitHub contribution graph — drop it in your README",
-      "htmlUrl": "https://github.com/webywz/contrib-aquarium",
-      "stars": 0,
-      "forks": 0,
-      "language": null,
-      "updatedAt": "2026-10-29T10:51:21Z",
-      "createdAt": "2026-10-29T10:50:29Z"
-    },
     {
       "name": "webywz",
       "fullName": "webywz/webywz",
@@ -40,8 +18,63 @@
       "stars": 0,
       "forks": 0,
       "language": "JavaScript",
-      "updatedAt": "2026-10-29T10:46:51Z",
+      "updatedAt": "2026-10-30T02:46:57Z",
       "createdAt": "2026-10-29T07:38:04Z"
+    },
+    {
+      "name": "diff-vibe",
+      "fullName": "webywz/diff-vibe",
+      "description": "Turn your git diff into a sharp, on-brand PR title and body (companion to vibe-commit)",
+      "htmlUrl": "https://github.com/webywz/diff-vibe",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "updatedAt": "2026-10-30T02:17:12Z",
+      "createdAt": "2026-10-29T12:19:46Z"
+    },
+    {
+      "name": "contrib-aquarium",
+      "fullName": "webywz/contrib-aquarium",
+      "description": "Living SVG aquarium driven by your GitHub contribution graph — drop it in your README",
+      "htmlUrl": "https://github.com/webywz/contrib-aquarium",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "updatedAt": "2026-10-30T02:16:12Z",
+      "createdAt": "2026-10-29T10:50:29Z"
+    },
+    {
+      "name": "vibe-commit",
+      "fullName": "webywz/vibe-commit",
+      "description": "One-command CLI that writes stylish, conventional commit messages with personality",
+      "htmlUrl": "https://github.com/webywz/vibe-commit",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "updatedAt": "2026-10-30T02:15:47Z",
+      "createdAt": "2026-10-29T10:50:49Z"
+    },
+    {
+      "name": "llm-roast",
+      "fullName": "webywz/llm-roast",
+      "description": "Roast your LLM prompts and answers — detect fluff, hallucination vibes, and overconfidence with a cheeky CLI score",
+      "htmlUrl": "https://github.com/webywz/llm-roast",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "updatedAt": "2026-10-30T02:15:43Z",
+      "createdAt": "2026-10-29T12:24:45Z"
+    },
+    {
+      "name": "prompt-diff",
+      "fullName": "webywz/prompt-diff",
+      "description": "Diff two LLM prompts like code — side-by-side intent, tokens, and regression risk for AI apps",
+      "htmlUrl": "https://github.com/webywz/prompt-diff",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "updatedAt": "2026-10-30T02:15:37Z",
+      "createdAt": "2026-10-29T12:22:55Z"
     },
     {
       "name": "breathing-github-profile",
@@ -50,9 +83,42 @@
       "htmlUrl": "https://github.com/webywz/breathing-github-profile",
       "stars": 0,
       "forks": 0,
-      "language": null,
-      "updatedAt": "2026-10-29T07:39:02Z",
+      "language": "TypeScript",
+      "updatedAt": "2026-10-30T02:15:18Z",
       "createdAt": "2026-10-29T07:38:56Z"
+    },
+    {
+      "name": "context-diet",
+      "fullName": "webywz/context-diet",
+      "description": "Slim down LLM context — drop noise, keep the signal, estimate tokens before you pay for them",
+      "htmlUrl": "https://github.com/webywz/context-diet",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "updatedAt": "2026-10-30T02:15:14Z",
+      "createdAt": "2026-10-29T12:40:39Z"
+    },
+    {
+      "name": "eval-smoke",
+      "fullName": "webywz/eval-smoke",
+      "description": "One-minute smoke evals for prompts and models — catch regressions before they ship",
+      "htmlUrl": "https://github.com/webywz/eval-smoke",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "updatedAt": "2026-10-30T02:15:10Z",
+      "createdAt": "2026-10-29T12:41:15Z"
+    },
+    {
+      "name": "agent-trace",
+      "fullName": "webywz/agent-trace",
+      "description": "Turn messy agent runs into a readable timeline — tools, thoughts, and where it went sideways",
+      "htmlUrl": "https://github.com/webywz/agent-trace",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "updatedAt": "2026-10-30T02:14:18Z",
+      "createdAt": "2026-10-29T12:40:57Z"
     },
     {
       "name": "learn-fastapi",
@@ -165,5 +231,10 @@
       "createdAt": "2019-12-23T10:19:17Z"
     }
   ],
-  "fetchedAt": "2026-10-29T10:58:13.598Z"
+  "streak": {
+    "current": 1,
+    "longest": 4,
+    "total": 196
+  },
+  "fetchedAt": "2026-10-30T02:56:07.372Z"
 }

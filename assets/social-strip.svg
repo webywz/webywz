@@ -7,7 +7,9 @@
       <stop offset="100%" stop-color="#7aa2f7" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <rect x="0.75" y="0.75" width="878.5" height="50.5" rx="12" fill="#12131c" stroke="#292e42" stroke-width="1.25"/>
+  <rect x="0.75" y="0.75" width="878.5" height="50.5" rx="12" fill="#12131c" stroke="#292e42" stroke-width="1.25">
+    <animate attributeName="stroke-opacity" values="0.55;1;0.55" dur="5.2s" repeatCount="indefinite"/>
+  </rect>
   <rect x="0" y="1" width="880" height="2" fill="url(#sg)">
     <animate attributeName="opacity" values="0.3;0.9;0.3" dur="5s" repeatCount="indefinite"/>
   </rect>
@@ -17,5 +19,8 @@
   <circle cx="760" cy="26" r="3.5" fill="#7dcfff">
     <animate attributeName="opacity" values="0.35;1;0.35" dur="4s" begin="1s" repeatCount="indefinite"/>
   </circle>
-  <text x="440" y="32" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" fill="#a9b1d6" letter-spacing="1.5">github.com/webywz · aquarium · vibe-commit · diff-vibe</text>
+  <text x="440" y="32" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" fill="#a9b1d6" letter-spacing="1.5">
+    github.com/webywz · aquarium · vibe-commit · diff-vibe
+    <animate attributeName="opacity" values="0.65;1;0.65" dur="5.2s" repeatCount="indefinite"/>
+  </text>
 </svg>

@@ -160,7 +160,7 @@ Auto-refreshed showcase cards. Hand-written copy above stays untouched.
 
 由 GitHub 贡献图驱动的活体 SVG 水族馆，可直接嵌入 README
 
-`SVG` · ⭐ 0 · [Demo](https://github.com/webywz/contrib-aquarium)
+`TypeScript` · ⭐ 0 · [Demo](https://github.com/webywz/contrib-aquarium)
 
 </td>
 <td width="50%" valign="top">
@@ -169,7 +169,7 @@ Auto-refreshed showcase cards. Hand-written copy above stays untouched.
 
 一条命令写出有品味的 conventional commit
 
-`JavaScript` · ⭐ 0 · [CLI](https://github.com/webywz/vibe-commit)
+`TypeScript` · ⭐ 0 · [CLI](https://github.com/webywz/vibe-commit)
 
 </td>
 </tr>
@@ -180,7 +180,7 @@ Auto-refreshed showcase cards. Hand-written copy above stays untouched.
 
 开源的活 README 生成器：每日刷新 + 测试
 
-`JavaScript` · ⭐ 0
+`TypeScript` · ⭐ 0
 
 </td>
 <td width="50%" valign="top">
@@ -239,7 +239,7 @@ Vue 响应式原理的分阶段实现
 </tr>
 </table>
 
-![GitHub Streak](https://streak-stats.demolab.com?user=webywz&theme=tokyonight&hide_border=true)
+<img src="assets/streak.svg" alt="GitHub Streak" />
 
 </div>
 <!--STATS:END-->
@@ -251,7 +251,7 @@ Driven by [breathing-github-profile](https://github.com/webywz/breathing-github-
 这份 README 由 [breathing-github-profile](https://github.com/webywz/breathing-github-profile) 驱动：标记保护区每天刷新项目卡和统计；同一条 daily-refresh 还会调用 [contrib-aquarium](https://github.com/webywz/contrib-aquarium) 重画 `assets/aquarium.svg`。手写的句子不会被覆盖。
 
 <!--TIMESTAMP:START-->
-*最后更新：2026-10-29 18:58:13 (Asia/Shanghai)*
+*最后更新：2026-10-30 10:56:07 (Asia/Shanghai)*
 <!--TIMESTAMP:END-->
 
 ---

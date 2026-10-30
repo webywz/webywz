@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="168" viewBox="0 0 860 168" role="img" aria-label="GitHub Streak">
+  <defs>
+    <filter id="streakGlow" x="-6%" y="-14%" width="112%" height="128%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#7aa2f7" flood-opacity="0.26"/>
+    </filter>
+    <linearGradient id="streakEdge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7aa2f7" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="#7dcfff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#7aa2f7" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7aa2f7"/>
+      <stop offset="100%" stop-color="#7dcfff"/>
+    </linearGradient>
+  </defs>
+  <g filter="url(#streakGlow)">
+    <rect width="860" height="168" rx="16" fill="#1a1b26" stroke="#3b4261" stroke-width="1.25"/>
+  </g>
+  <rect x="40" y="1" width="780" height="2" rx="1" fill="url(#streakEdge)">
+    <animate attributeName="opacity" values="0.3;0.9;0.3" dur="4.2s" begin="0s" repeatCount="indefinite"/>
+  </rect>
+  <text x="28" y="32" fill="#7aa2f7" font-size="15" font-weight="700" font-family="Verdana, Geneva, sans-serif">webywz · streak</text>
+  <text x="28" y="50" fill="#565f89" font-size="11" font-family="Verdana, Geneva, sans-serif">theme · tokyonight · local SVG</text>
+
+  <g transform="translate(110, 98)">
+    <circle cx="0" cy="0" r="46" fill="none" stroke="#121526" stroke-width="8"/>
+    <circle cx="0" cy="0" r="46" fill="none" stroke="url(#ringGrad)" stroke-width="8"
+      stroke-linecap="round" stroke-dasharray="54 235" transform="rotate(-90)">
+      <animate attributeName="stroke-dasharray" values="54 235;68 221;54 235" dur="4.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.65;1;0.65" dur="4.8s" begin="0s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="28" fill="#12131c" stroke="#7aa2f7" stroke-width="1" stroke-opacity="0.35">
+      <animate attributeName="opacity" values="0.5;0.95;0.5" dur="4.8s" begin="0s" repeatCount="indefinite"/>
+    </circle>
+    <text x="0" y="6" text-anchor="middle" fill="#7dcfff" font-size="22" font-weight="700" font-family="Verdana, Geneva, sans-serif">
+      1
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="3.8s" begin="0s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <g font-family="Verdana, Geneva, sans-serif">
+    <text x="220" y="78" fill="#565f89" font-size="12">Current streak · 当前连续</text>
+    <text x="220" y="104" fill="#7dcfff" font-size="28" font-weight="700">
+      1
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3.8s" begin="0s" repeatCount="indefinite"/>
+    </text>
+    <text x="220" y="126" fill="#565f89" font-size="11">days</text>
+
+    <text x="430" y="78" fill="#565f89" font-size="12">Longest · 最长</text>
+    <text x="430" y="104" fill="#7aa2f7" font-size="28" font-weight="700">
+      4
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3.8s" begin="0.25s" repeatCount="indefinite"/>
+    </text>
+    <text x="430" y="126" fill="#565f89" font-size="11">days</text>
+
+    <text x="620" y="78" fill="#565f89" font-size="12">Total · 本年贡献</text>
+    <text x="620" y="104" fill="#9ece6a" font-size="28" font-weight="700">
+      196
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3.8s" begin="0.45s" repeatCount="indefinite"/>
+    </text>
+    <text x="620" y="126" fill="#565f89" font-size="11">contributions</text>
+  </g>
+</svg>

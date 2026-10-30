@@ -17,6 +17,8 @@ import {
   resolveDescription,
   renderStatsSvg,
   renderLangsSvg,
+  renderStreakSvg,
+  computeStreakFromDays,
   aggregateLanguages
 } from '../scripts/refresh.js';
 
@@ -181,10 +183,12 @@ function testReadmeStructure() {
   assert(readme.includes('assets/terminal-flex.svg'), 'README 含克制伪终端 SVG');
   assert(!readme.includes('readme-typing-svg.demolab.com'), '去掉 demolab typing SVG');
   assert(!readme.includes('color=bb9af7'), 'shields 不再使用紫粉 AI 色');
-  assert(readme.includes('theme=tokyonight'), '统计卡片使用 tokyonight 主题');
   assert(readme.includes('assets/banner.svg'), 'README 包含自定义横幅');
   assert(readme.includes('assets/stats.svg'), 'README 使用本地 stats SVG');
   assert(readme.includes('assets/langs.svg'), 'README 使用本地 langs SVG');
+  assert(readme.includes('assets/streak.svg'), 'README 使用本地 streak SVG');
+  assert(!readme.includes('streak-stats.demolab.com'), '去掉 demolab streak');
+  assert(!readme.includes('github-readme-stats.vercel.app'), '不依赖 vercel stats');
   assert(readme.includes('assets/aquarium.svg'), 'README 嵌入本地贡献水族箱 SVG');
   assert(readme.includes('assets/wall-header.svg'), 'README 含产品墙呼吸标题条');
   assert(readme.includes('assets/card-chrome.svg'), 'README 产品卡含微光 chrome');
@@ -338,9 +342,11 @@ function testProjectCards() {
   assert(markdown.includes('<table>'), '项目卡使用双列卡片布局');
 
   const stats = generateStatsMarkdown();
-  assert(stats.includes('theme=tokyonight'), '统计区使用 tokyonight');
-  assert(stats.includes(`user=${USERNAME}`), 'streak 绑定 webywz');
   assert(stats.includes('assets/stats.svg'), '统计区引用本地 stats.svg');
+  assert(stats.includes('assets/langs.svg'), '统计区引用本地 langs.svg');
+  assert(stats.includes('assets/streak.svg'), '统计区引用本地 streak.svg');
+  assert(!stats.includes('demolab'), '统计区无 demolab');
+  assert(!stats.includes('github-readme-stats'), '统计区无 vercel stats');
 }
 
 function testGeneratedSvgs() {
@@ -397,6 +403,13 @@ function testGeneratedSvgs() {
   }
   assert(existsSync(statsPath), 'stats.svg 存在');
   assert(existsSync(langsPath), 'langs.svg 存在');
+  const streakPath = join(ROOT_DIR, 'assets', 'streak.svg');
+  assert(existsSync(streakPath), 'streak.svg 存在');
+  const streakFile = readFileSync(streakPath, 'utf-8');
+  assert(streakFile.includes('<animate'), 'streak.svg 含呼吸动效');
+  assert(streakFile.includes('tokyonight'), 'streak.svg 标注 tokyonight');
+  assert(streakFile.includes('#7aa2f7'), 'streak.svg 使用 tokyo-night 青蓝');
+  assert(!streakFile.includes('#bb9af7'), 'streak.svg 无紫粉主色');
 
   const sampleRepos = [
     repo('learn-fastapi', { language: 'Python', stars: 3, forks: 1 }),
@@ -408,12 +421,34 @@ function testGeneratedSvgs() {
   assert(statsSvg.includes('公开仓库'), 'stats SVG 包含仓库数');
   assert(statsSvg.includes('Stars'), 'stats SVG 包含 Stars');
   assert(statsSvg.includes('#1a1b26'), 'stats SVG 使用深色背景');
+  assert(statsSvg.includes('<animate'), 'stats SVG 含呼吸动效');
+  assert(statsSvg.includes('#7aa2f7'), 'stats SVG 使用青蓝');
+  assert(!statsSvg.includes('#bb9af7'), 'stats SVG 无紫粉主色');
 
   const langs = aggregateLanguages(sampleRepos);
   assert(langs[0].name === 'Python' || langs.length === 3, '语言聚合按仓库计数');
   const langsSvg = renderLangsSvg(sampleRepos);
   assert(langsSvg.includes('Python'), 'langs SVG 包含 Python');
   assert(langsSvg.includes('tokyonight'), 'langs SVG 标注 tokyonight');
+  assert(langsSvg.includes('<animate'), 'langs SVG 含呼吸动效');
+
+  const streakSvg = renderStreakSvg({ current: 2, longest: 5, total: 204 });
+  assert(streakSvg.includes('tokyonight'), 'streak renderer 标注 tokyonight');
+  assert(streakSvg.includes('<animate'), 'streak renderer 含呼吸动效');
+  assert(streakSvg.includes(USERNAME), 'streak SVG 绑定 webywz');
+  assert(streakSvg.includes('204'), 'streak SVG 写入总贡献');
+  assert(streakSvg.includes('#7dcfff'), 'streak SVG 使用青蓝光');
+
+  const streakMath = computeStreakFromDays([
+    { contributionCount: 1 },
+    { contributionCount: 1 },
+    { contributionCount: 0 },
+    { contributionCount: 2 },
+    { contributionCount: 3 },
+    { contributionCount: 0 }
+  ]);
+  assert(streakMath.current === 2, 'computeStreakFromDays 忽略末尾空日');
+  assert(streakMath.longest === 2, 'computeStreakFromDays 计算最长连续');
 }
 
 function testWorkflowIntact() {
