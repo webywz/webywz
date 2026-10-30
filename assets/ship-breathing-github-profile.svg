@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="156" viewBox="0 0 420 156" role="img" aria-label="breathing-github-profile">
+  <defs>
+    <filter id="shbreathinggithubprofileShadow" x="-6%" y="-8%" width="112%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#000000" flood-opacity="0.35"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="2.5" flood-color="#7dcfff" flood-opacity="0.18"/>
+    </filter>
+    <linearGradient id="shbreathinggithubprofileEdge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7aa2f7" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#7dcfff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#7aa2f7" stop-opacity="0.12"/>
+    </linearGradient>
+  </defs>
+  <g filter="url(#shbreathinggithubprofileShadow)">
+    <rect width="420" height="156" rx="14" fill="#1a1b26" stroke="#3b4261" stroke-width="1"/>
+  </g>
+  <rect x="20" y="1" width="380" height="2" rx="1" fill="url(#shbreathinggithubprofileEdge)">
+    <animate attributeName="opacity" values="0.35;0.85;0.35" dur="4.2s" begin="0s" repeatCount="indefinite"/>
+  </rect>
+  <text x="22" y="34" fill="#c0caf5" font-size="15" font-weight="700" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">breathing-github-profile</text>
+  <text x="22" y="58" fill="#a9b1d6" font-size="12" font-weight="500" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">开源的活 README 生成器：每日刷新 + 测试</text>
+  <rect x="22" y="116" width="86" height="20" rx="10" fill="#16161e" stroke="#3b4261" stroke-width="1"/>
+  <text x="65" y="130" text-anchor="middle" fill="#7dcfff" font-size="10" font-weight="600" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, Liberation Mono, monospace">TypeScript</text>
+  <text x="122" y="130" fill="#c0caf5" font-size="12" font-weight="600" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, Liberation Mono, monospace">★ 0</text>
+  
+</svg>

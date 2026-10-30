@@ -5,7 +5,7 @@
 **Turn contributions into something that breathes.**  
 **把贡献变成会呼吸的东西。**
 
-<img src="assets/terminal-flex.svg" alt="npx contrib-aquarium — living SVG from your contribution graph" width="860" height="97" />
+<img src="assets/terminal-flex.svg" alt="npx contrib-aquarium — living SVG from your contribution graph" width="860" height="72" />
 
 [![GitHub followers](https://img.shields.io/github/followers/webywz?style=flat-square&logo=github&color=7aa2f7&labelColor=1a1b26)](https://github.com/webywz)
 [![Profile Views](https://komarev.com/ghpvc/?username=webywz&style=flat-square&color=7aa2f7&label=profile+views)](https://github.com/webywz)
@@ -23,107 +23,59 @@ Gateways and desktop tools by day; contribution graphs that swim by night. Commi
 ## ✨ 亮点 Demo · 产品墙 / Product wall
 
 <p align="center">
-  <img src="assets/wall-header.svg" alt="Product wall · 产品墙" width="880" height="52" />
+  <img src="assets/wall-header.svg" alt="Product wall · 产品墙" width="880" height="48" />
 </p>
 
-One outcome per cell. Copy the command and go. Each card carries a micro breathing chrome.
+One outcome per cell. Copy the command and go. Each card is a clinical SVG tile — no blue underline chrome.
 
-一格一件事。复制命令就能跑。每张卡带一点会呼吸的微光边。
+一格一件事。复制命令就能跑。每张卡是 tokyo-night clinical SVG，不再用廉价蓝下划线标题。
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="50%" align="center" valign="top">
 
-<img src="assets/card-chrome.svg" alt="" width="100%" height="24" />
-
-### [contrib-aquarium](https://github.com/webywz/contrib-aquarium)
-
-A year of commits, rendered as a living SVG aquarium. The tank below is what it paints for this profile every day.
-
-一年的 commit 变成一座会呼吸的 SVG 水族馆。下面那座缸就是它每天给这份主页画的。
-
-```bash
-npx contrib-aquarium
-```
+<a href="https://github.com/webywz/contrib-aquarium">
+<img src="assets/product-contrib-aquarium.svg" width="420" height="208" alt="contrib-aquarium" />
+</a>
 
 </td>
-<td width="50%" valign="top">
+<td width="50%" align="center" valign="top">
 
-<img src="assets/card-chrome.svg" alt="" width="100%" height="24" />
-
-### [vibe-commit](https://github.com/webywz/vibe-commit)
-
-One command for a conventional commit with taste. Messages can have character too.
-
-一条命令，写出有品味的 conventional commit。提交信息也可以有性格。
-
-```bash
-npx @webywz/vibe-commit
-```
+<a href="https://github.com/webywz/vibe-commit">
+<img src="assets/product-vibe-commit.svg" width="420" height="208" alt="vibe-commit" />
+</a>
 
 </td>
 </tr>
 <tr>
-<td width="50%" valign="top">
+<td width="50%" align="center" valign="top">
 
-<img src="assets/card-chrome.svg" alt="" width="100%" height="24" />
-
-### [agent-trace](https://github.com/webywz/agent-trace)
-
-Messy agent run logs become a readable timeline — filter, stats, Markdown & Mermaid.
-
-杂乱的 agent 运行日志变成可读时间线：过滤、统计、Markdown / Mermaid。
-
-```bash
-npx @webywz/agent-trace
-```
+<a href="https://github.com/webywz/agent-trace">
+<img src="assets/product-agent-trace.svg" width="420" height="208" alt="agent-trace" />
+</a>
 
 </td>
-<td width="50%" valign="top">
+<td width="50%" align="center" valign="top">
 
-<img src="assets/card-chrome.svg" alt="" width="100%" height="24" />
-
-### [eval-smoke](https://github.com/webywz/eval-smoke)
-
-One-minute smoke evals for prompts and models — matchers, diffs, JUnit.
-
-一分钟跑通 prompt / 模型冒烟评测：匹配器、diff、JUnit。
-
-```bash
-npx @webywz/eval-smoke
-```
+<a href="https://github.com/webywz/eval-smoke">
+<img src="assets/product-eval-smoke.svg" width="420" height="208" alt="eval-smoke" />
+</a>
 
 </td>
 </tr>
 <tr>
-<td width="50%" valign="top">
+<td width="50%" align="center" valign="top">
 
-<img src="assets/card-chrome.svg" alt="" width="100%" height="24" />
-
-### [diff-vibe](https://github.com/webywz/diff-vibe)
-
-A git diff becomes a paste-ready PR title and body. Offline heuristic first; AI only when a key is set.
-
-git diff 直接变成可贴的 PR title 和 body。离线启发式先出草稿，有 Key 再可选 AI。
-
-```bash
-npx @webywz/diff-vibe
-```
+<a href="https://github.com/webywz/diff-vibe">
+<img src="assets/product-diff-vibe.svg" width="420" height="208" alt="diff-vibe" />
+</a>
 
 </td>
-<td width="50%" valign="top">
+<td width="50%" align="center" valign="top">
 
-<img src="assets/card-chrome.svg" alt="" width="100%" height="24" />
-
-### [context-diet](https://github.com/webywz/context-diet)
-
-Slim LLM context before you send it — drop noise, keep the signal, estimate tokens.
-
-发之前先给上下文瘦身：丢掉噪声，留下信号，估算 token。
-
-```bash
-npx @webywz/context-diet
-```
+<a href="https://github.com/webywz/context-diet">
+<img src="assets/product-context-diet.svg" width="420" height="208" alt="context-diet" />
+</a>
 
 </td>
 </tr>
@@ -154,62 +106,50 @@ Auto-refreshed showcase cards. Hand-written copy above stays untouched.
 <!--PROJECTS:START-->
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="50%" align="center" valign="top">
 
-### [contrib-aquarium](https://github.com/webywz/contrib-aquarium)
-
-由 GitHub 贡献图驱动的活体 SVG 水族馆，可直接嵌入 README
-
-`TypeScript` · ⭐ 0 · [Demo](https://github.com/webywz/contrib-aquarium)
+<a href="https://github.com/webywz/contrib-aquarium">
+<img src="assets/ship-contrib-aquarium.svg" width="420" height="156" alt="contrib-aquarium" />
+</a>
 
 </td>
-<td width="50%" valign="top">
+<td width="50%" align="center" valign="top">
 
-### [vibe-commit](https://github.com/webywz/vibe-commit)
-
-一条命令写出有品味的 conventional commit
-
-`TypeScript` · ⭐ 0 · [CLI](https://github.com/webywz/vibe-commit)
+<a href="https://github.com/webywz/vibe-commit">
+<img src="assets/ship-vibe-commit.svg" width="420" height="156" alt="vibe-commit" />
+</a>
 
 </td>
 </tr>
 <tr>
-<td width="50%" valign="top">
+<td width="50%" align="center" valign="top">
 
-### [breathing-github-profile](https://github.com/webywz/breathing-github-profile)
-
-开源的活 README 生成器：每日刷新 + 测试
-
-`TypeScript` · ⭐ 0
+<a href="https://github.com/webywz/breathing-github-profile">
+<img src="assets/ship-breathing-github-profile.svg" width="420" height="156" alt="breathing-github-profile" />
+</a>
 
 </td>
-<td width="50%" valign="top">
+<td width="50%" align="center" valign="top">
 
-### [learn-fastapi](https://github.com/webywz/learn-fastapi)
-
-面向前端开发者的 FastAPI 后端实战教程
-
-`Python` · ⭐ 3
+<a href="https://github.com/webywz/learn-fastapi">
+<img src="assets/ship-learn-fastapi.svg" width="420" height="156" alt="learn-fastapi" />
+</a>
 
 </td>
 </tr>
 <tr>
-<td width="50%" valign="top">
+<td width="50%" align="center" valign="top">
 
-### [imitate-vue-stage](https://github.com/webywz/imitate-vue-stage)
-
-Vue 响应式原理的分阶段实现
-
-`JavaScript` · ⭐ 2
+<a href="https://github.com/webywz/imitate-vue-stage">
+<img src="assets/ship-imitate-vue-stage.svg" width="420" height="156" alt="imitate-vue-stage" />
+</a>
 
 </td>
-<td width="50%" valign="top">
+<td width="50%" align="center" valign="top">
 
-### [taobao-shop](https://github.com/webywz/taobao-shop)
-
-淘宝店铺采集、后端与桌面端工具套件
-
-`JavaScript` · ⭐ 1
+<a href="https://github.com/webywz/taobao-shop">
+<img src="assets/ship-taobao-shop.svg" width="420" height="156" alt="taobao-shop" />
+</a>
 
 </td>
 </tr>
@@ -251,7 +191,7 @@ Driven by [breathing-github-profile](https://github.com/webywz/breathing-github-
 这份 README 由 [breathing-github-profile](https://github.com/webywz/breathing-github-profile) 驱动：标记保护区每天刷新项目卡和统计；同一条 daily-refresh 还会调用 [contrib-aquarium](https://github.com/webywz/contrib-aquarium) 重画 `assets/aquarium.svg`。手写的句子不会被覆盖。
 
 <!--TIMESTAMP:START-->
-*最后更新：2026-10-30 11:10:23 (Asia/Shanghai)*
+*最后更新：2026-10-30 10:56:07 (Asia/Shanghai)*
 <!--TIMESTAMP:END-->
 
 ---
