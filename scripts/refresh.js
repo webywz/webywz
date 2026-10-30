@@ -43,7 +43,7 @@ export const TRIVIAL_REPOS = new Set([
 
 export const FALLBACK_DESCRIPTIONS = {
   'contrib-aquarium': '由 GitHub 贡献图驱动的活体 SVG 水族馆，可直接嵌入 README',
-  'vibe-commit': '有品味的 conventional commit；examples 含 pair-workflow',
+  'vibe-commit': '有品味的 commit；pair-workflow + CI --github',
   'diff-vibe': 'git diff 成 PR；支持 CI --github / Job Summary',
   'breathing-github-profile': '开源的活 README 生成器：每日刷新 + 测试',
   'learn-fastapi': '面向前端开发者的 FastAPI 后端实战教程',
@@ -87,8 +87,8 @@ export const PRODUCT_WALL = [
     name: 'vibe-commit',
     tag: 'CLI',
     href: 'https://github.com/webywz/vibe-commit',
-    en: ['Tasteful commits — examples include pair-workflow.'],
-    zh: ['有品味的 commit；examples 含成对 pair-workflow。'],
+    en: ['Tasteful commits; pair-workflow + CI --github.'],
+    zh: ['有品味的 commit；pair-workflow + CI --github。'],
     cmd: 'npx @webywz/vibe-commit'
   },
   {
