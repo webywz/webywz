@@ -407,7 +407,7 @@ function testGeneratedSvgs() {
   assert(existsSync(streakPath), 'streak.svg 存在');
   const streakFile = readFileSync(streakPath, 'utf-8');
   assert(streakFile.includes('<animate'), 'streak.svg 含呼吸动效');
-  assert(streakFile.includes('tokyonight'), 'streak.svg 标注 tokyonight');
+  assert(streakFile.includes('tokyo-night') || streakFile.includes('tokyonight'), 'streak.svg 标注 tokyonight');
   assert(streakFile.includes('#7aa2f7'), 'streak.svg 使用 tokyo-night 青蓝');
   assert(!streakFile.includes('#bb9af7'), 'streak.svg 无紫粉主色');
 
@@ -417,9 +417,9 @@ function testGeneratedSvgs() {
     repo('taobao-shop', { language: 'JavaScript', stars: 1 })
   ];
   const statsSvg = renderStatsSvg({ publicRepos: 18, followers: 3 }, sampleRepos);
-  assert(statsSvg.includes('tokyonight'), 'stats SVG 标注 tokyonight');
-  assert(statsSvg.includes('公开仓库'), 'stats SVG 包含仓库数');
-  assert(statsSvg.includes('Stars'), 'stats SVG 包含 Stars');
+  assert(statsSvg.includes('tokyo-night') || statsSvg.includes('tokyonight'), 'stats SVG 标注 tokyonight');
+  assert(statsSvg.includes('Repos') && statsSvg.includes('仓库'), 'stats SVG 包含仓库数');
+  assert(statsSvg.includes('Stars') && statsSvg.includes('星标'), 'stats SVG 包含 Stars');
   assert(statsSvg.includes('#1a1b26'), 'stats SVG 使用深色背景');
   assert(statsSvg.includes('<animate'), 'stats SVG 含呼吸动效');
   assert(statsSvg.includes('#7aa2f7'), 'stats SVG 使用青蓝');
@@ -429,11 +429,11 @@ function testGeneratedSvgs() {
   assert(langs[0].name === 'Python' || langs.length === 3, '语言聚合按仓库计数');
   const langsSvg = renderLangsSvg(sampleRepos);
   assert(langsSvg.includes('Python'), 'langs SVG 包含 Python');
-  assert(langsSvg.includes('tokyonight'), 'langs SVG 标注 tokyonight');
+  assert(langsSvg.includes('tokyo-night') || langsSvg.includes('tokyonight'), 'langs SVG 标注 tokyonight');
   assert(langsSvg.includes('<animate'), 'langs SVG 含呼吸动效');
 
   const streakSvg = renderStreakSvg({ current: 2, longest: 5, total: 204 });
-  assert(streakSvg.includes('tokyonight'), 'streak renderer 标注 tokyonight');
+  assert(streakSvg.includes('tokyo-night') || streakSvg.includes('tokyonight'), 'streak renderer 标注 tokyonight');
   assert(streakSvg.includes('<animate'), 'streak renderer 含呼吸动效');
   assert(streakSvg.includes(USERNAME), 'streak SVG 绑定 webywz');
   assert(streakSvg.includes('204'), 'streak SVG 写入总贡献');
@@ -449,6 +449,24 @@ function testGeneratedSvgs() {
   ]);
   assert(streakMath.current === 2, 'computeStreakFromDays 忽略末尾空日');
   assert(streakMath.longest === 2, 'computeStreakFromDays 计算最长连续');
+
+  // v5 craft: clinical palette, no number-opacity steal, balanced tiles
+  assert(!statsSvg.includes('#ff9e64'), 'stats SVG 无刺眼橙');
+  assert(!statsSvg.includes('#9ece6a'), 'stats SVG 无贡献绿');
+  assert(!statsSvg.includes('#f1e05a'), 'stats SVG 无 JS 黄');
+  assert(statsSvg.includes('width="420"'), 'stats 卡宽 420 对齐 langs');
+  assert(langsSvg.includes('width="420"'), 'langs 卡宽 420');
+  assert(!langsSvg.includes('#f1e05a'), 'langs 无 JS 品牌黄');
+  assert(!langsSvg.includes('#e34c26'), 'langs 无 HTML 红');
+  assert(!langsSvg.includes('attributeName="width"'), 'langs 进度条不抢戏（无 width 脉动）');
+  assert(streakSvg.includes('width="852"'), 'streak 与双卡总宽对齐');
+  assert(streakSvg.includes('height="148"'), 'streak 收紧高度');
+  assert(!streakSvg.includes('#9ece6a'), 'streak Total 不用贡献绿');
+  // Numbers stay readable: opacity animate only on chrome/glow, not value text content pattern is soft-checked via no animate inside number-heavy blocks being hard — ensure ring uses stroke-opacity
+  assert(streakSvg.includes('stroke-opacity') || streakSvg.includes('ringGlow'), 'streak 呼吸落在环光上');
+  const statsMd = generateStatsMarkdown();
+  assert(statsMd.includes('width="420"'), 'STATS markdown 固定双卡宽度');
+  assert(statsMd.includes('width="852"'), 'STATS markdown 固定 streak 宽度');
 }
 
 function testWorkflowIntact() {

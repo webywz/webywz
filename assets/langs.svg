@@ -1,55 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="380" height="195" viewBox="0 0 380 195" role="img" aria-label="Top Languages">
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="188" viewBox="0 0 420 188" role="img" aria-label="Top Languages">
   <defs>
-    <filter id="langsGlow" x="-8%" y="-12%" width="116%" height="124%">
-      <feDropShadow dx="0" dy="0" stdDeviation="3.5" flood-color="#7dcfff" flood-opacity="0.22"/>
+    <filter id="langsShadow" x="-6%" y="-8%" width="112%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#000000" flood-opacity="0.35"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="2.5" flood-color="#7dcfff" flood-opacity="0.18"/>
     </filter>
     <linearGradient id="langsEdge" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#7dcfff" stop-opacity="0.12"/>
-      <stop offset="50%" stop-color="#7aa2f7" stop-opacity="0.5"/>
-      <stop offset="100%" stop-color="#7dcfff" stop-opacity="0.12"/>
+      <stop offset="0%" stop-color="#7aa2f7" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#7dcfff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#7aa2f7" stop-opacity="0.12"/>
     </linearGradient>
   </defs>
-  <g filter="url(#langsGlow)">
-    <rect width="380" height="195" rx="16" fill="#1a1b26" stroke="#3b4261" stroke-width="1.25"/>
+  <g filter="url(#langsShadow)">
+    <rect width="420" height="188" rx="14" fill="#1a1b26" stroke="#3b4261" stroke-width="1"/>
   </g>
-  <rect x="16" y="1" width="348" height="2" rx="1" fill="url(#langsEdge)">
-    <animate attributeName="opacity" values="0.3;0.9;0.3" dur="4.2s" begin="0s" repeatCount="indefinite"/>
+  <rect x="20" y="1" width="380" height="2" rx="1" fill="url(#langsEdge)">
+    <animate attributeName="opacity" values="0.35;0.85;0.35" dur="4.2s" begin="0s" repeatCount="indefinite"/>
   </rect>
-  <text x="24" y="36" fill="#7dcfff" font-size="16" font-weight="700" font-family="Verdana, Geneva, sans-serif">最常用的语言</text>
-  <text x="24" y="56" fill="#565f89" font-size="11" font-family="Verdana, Geneva, sans-serif">theme · tokyonight</text>
-  <text x="24" y="70" fill="#c0caf5" font-size="12" font-family="Verdana, Geneva, sans-serif">TypeScript</text>
-  <rect x="130" y="59" width="210" height="10" rx="5" fill="#121526"/>
-  <rect x="130" y="59" width="126" height="10" rx="5" fill="#3178c6">
-    <animate attributeName="width" values="126;132;126;122;126" dur="4.6s" begin="0.00s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.75;1;0.75" dur="4.6s" begin="0.00s" repeatCount="indefinite"/>
+  <text x="22" y="30" fill="#7dcfff" font-size="13" font-weight="700" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" letter-spacing="0.08em">LANGUAGES</text>
+  <text x="118" y="30" fill="#565f89" font-size="13" font-weight="500" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">· 语言</text>
+  <text x="396" y="30" text-anchor="end" fill="#565f89" font-size="10" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" letter-spacing="0.08em">tokyo-night</text>
+  <text x="22" y="56" fill="#c0caf5" font-size="12" font-weight="500" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">TypeScript</text>
+  <rect x="112" y="48" width="236" height="7" rx="3.5" fill="#12131c"/>
+  <rect x="112" y="48" width="142" height="7" rx="3.5" fill="#7aa2f7" opacity="0.9">
+    <animate attributeName="opacity" values="0.75;0.95;0.75" dur="4.6s" begin="0.00s" repeatCount="indefinite"/>
   </rect>
-  <text x="350" y="70" fill="#565f89" font-size="11" font-family="Verdana, Geneva, sans-serif">60%</text>
-  <text x="24" y="90" fill="#c0caf5" font-size="12" font-family="Verdana, Geneva, sans-serif">JavaScript</text>
-  <rect x="130" y="79" width="210" height="10" rx="5" fill="#121526"/>
-  <rect x="130" y="79" width="53" height="10" rx="5" fill="#f1e05a">
-    <animate attributeName="width" values="53;59;53;49;53" dur="4.6s" begin="0.22s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.75;1;0.75" dur="4.6s" begin="0.22s" repeatCount="indefinite"/>
+  <text x="396" y="56" text-anchor="end" fill="#565f89" font-size="11" font-weight="600" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, Liberation Mono, monospace" letter-spacing="0.04em">60%</text>
+  <text x="22" y="80" fill="#c0caf5" font-size="12" font-weight="500" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">JavaScript</text>
+  <rect x="112" y="72" width="236" height="7" rx="3.5" fill="#12131c"/>
+  <rect x="112" y="72" width="59" height="7" rx="3.5" fill="#7dcfff" opacity="0.9">
+    <animate attributeName="opacity" values="0.75;0.95;0.75" dur="4.6s" begin="0.16s" repeatCount="indefinite"/>
   </rect>
-  <text x="350" y="90" fill="#565f89" font-size="11" font-family="Verdana, Geneva, sans-serif">25%</text>
-  <text x="24" y="110" fill="#c0caf5" font-size="12" font-family="Verdana, Geneva, sans-serif">Python</text>
-  <rect x="130" y="99" width="210" height="10" rx="5" fill="#121526"/>
-  <rect x="130" y="99" width="11" height="10" rx="5" fill="#3572a5">
-    <animate attributeName="width" values="11;17;11;7;11" dur="4.6s" begin="0.44s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.75;1;0.75" dur="4.6s" begin="0.44s" repeatCount="indefinite"/>
+  <text x="396" y="80" text-anchor="end" fill="#565f89" font-size="11" font-weight="600" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, Liberation Mono, monospace" letter-spacing="0.04em">25%</text>
+  <text x="22" y="104" fill="#c0caf5" font-size="12" font-weight="500" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">Python</text>
+  <rect x="112" y="96" width="236" height="7" rx="3.5" fill="#12131c"/>
+  <rect x="112" y="96" width="12" height="7" rx="3.5" fill="#89b4fa" opacity="0.9">
+    <animate attributeName="opacity" values="0.75;0.95;0.75" dur="4.6s" begin="0.32s" repeatCount="indefinite"/>
   </rect>
-  <text x="350" y="110" fill="#565f89" font-size="11" font-family="Verdana, Geneva, sans-serif">5%</text>
-  <text x="24" y="130" fill="#c0caf5" font-size="12" font-family="Verdana, Geneva, sans-serif">Dart</text>
-  <rect x="130" y="119" width="210" height="10" rx="5" fill="#121526"/>
-  <rect x="130" y="119" width="11" height="10" rx="5" fill="#00b4ab">
-    <animate attributeName="width" values="11;17;11;7;11" dur="4.6s" begin="0.66s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.75;1;0.75" dur="4.6s" begin="0.66s" repeatCount="indefinite"/>
+  <text x="396" y="104" text-anchor="end" fill="#565f89" font-size="11" font-weight="600" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, Liberation Mono, monospace" letter-spacing="0.04em">5%</text>
+  <text x="22" y="128" fill="#c0caf5" font-size="12" font-weight="500" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">Dart</text>
+  <rect x="112" y="120" width="236" height="7" rx="3.5" fill="#12131c"/>
+  <rect x="112" y="120" width="12" height="7" rx="3.5" fill="#a9b1d6" opacity="0.9">
+    <animate attributeName="opacity" values="0.75;0.95;0.75" dur="4.6s" begin="0.48s" repeatCount="indefinite"/>
   </rect>
-  <text x="350" y="130" fill="#565f89" font-size="11" font-family="Verdana, Geneva, sans-serif">5%</text>
-  <text x="24" y="150" fill="#c0caf5" font-size="12" font-family="Verdana, Geneva, sans-serif">HTML</text>
-  <rect x="130" y="139" width="210" height="10" rx="5" fill="#121526"/>
-  <rect x="130" y="139" width="11" height="10" rx="5" fill="#e34c26">
-    <animate attributeName="width" values="11;17;11;7;11" dur="4.6s" begin="0.88s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.75;1;0.75" dur="4.6s" begin="0.88s" repeatCount="indefinite"/>
+  <text x="396" y="128" text-anchor="end" fill="#565f89" font-size="11" font-weight="600" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, Liberation Mono, monospace" letter-spacing="0.04em">5%</text>
+  <text x="22" y="152" fill="#c0caf5" font-size="12" font-weight="500" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">HTML</text>
+  <rect x="112" y="144" width="236" height="7" rx="3.5" fill="#12131c"/>
+  <rect x="112" y="144" width="12" height="7" rx="3.5" fill="#738fd9" opacity="0.9">
+    <animate attributeName="opacity" values="0.75;0.95;0.75" dur="4.6s" begin="0.64s" repeatCount="indefinite"/>
   </rect>
-  <text x="350" y="150" fill="#565f89" font-size="11" font-family="Verdana, Geneva, sans-serif">5%</text>
+  <text x="396" y="152" text-anchor="end" fill="#565f89" font-size="11" font-weight="600" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, Liberation Mono, monospace" letter-spacing="0.04em">5%</text>
 </svg>

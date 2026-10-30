@@ -230,16 +230,16 @@ Vue 响应式原理的分阶段实现
 
 <table>
 <tr>
-<td>
-<img src="assets/stats.svg" alt="GitHub Stats" />
+<td width="50%" align="center" valign="top">
+<img src="assets/stats.svg" width="420" height="188" alt="GitHub Stats" />
 </td>
-<td>
-<img src="assets/langs.svg" alt="Top Languages" />
+<td width="50%" align="center" valign="top">
+<img src="assets/langs.svg" width="420" height="188" alt="Top Languages" />
 </td>
 </tr>
 </table>
 
-<img src="assets/streak.svg" alt="GitHub Streak" />
+<img src="assets/streak.svg" width="852" height="148" alt="GitHub Streak" />
 
 </div>
 <!--STATS:END-->
@@ -251,7 +251,7 @@ Driven by [breathing-github-profile](https://github.com/webywz/breathing-github-
 这份 README 由 [breathing-github-profile](https://github.com/webywz/breathing-github-profile) 驱动：标记保护区每天刷新项目卡和统计；同一条 daily-refresh 还会调用 [contrib-aquarium](https://github.com/webywz/contrib-aquarium) 重画 `assets/aquarium.svg`。手写的句子不会被覆盖。
 
 <!--TIMESTAMP:START-->
-*最后更新：2026-10-30 10:56:07 (Asia/Shanghai)*
+*最后更新：2026-10-30 11:10:23 (Asia/Shanghai)*
 <!--TIMESTAMP:END-->
 
 ---

@@ -1,63 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="860" height="168" viewBox="0 0 860 168" role="img" aria-label="GitHub Streak">
+<svg xmlns="http://www.w3.org/2000/svg" width="852" height="148" viewBox="0 0 852 148" role="img" aria-label="GitHub Streak">
   <defs>
-    <filter id="streakGlow" x="-6%" y="-14%" width="112%" height="128%">
-      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#7aa2f7" flood-opacity="0.26"/>
+    <filter id="streakShadow" x="-6%" y="-8%" width="112%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#000000" flood-opacity="0.35"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="2.5" flood-color="#7aa2f7" flood-opacity="0.18"/>
     </filter>
     <linearGradient id="streakEdge" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#7aa2f7" stop-opacity="0.1"/>
+      <stop offset="0%" stop-color="#7aa2f7" stop-opacity="0.12"/>
       <stop offset="50%" stop-color="#7dcfff" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#7aa2f7" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#7aa2f7" stop-opacity="0.12"/>
     </linearGradient>
+  </defs>
+  <g filter="url(#streakShadow)">
+    <rect width="852" height="148" rx="14" fill="#1a1b26" stroke="#3b4261" stroke-width="1"/>
+  </g>
+  <rect x="20" y="1" width="812" height="2" rx="1" fill="url(#streakEdge)">
+    <animate attributeName="opacity" values="0.35;0.85;0.35" dur="4.2s" begin="0s" repeatCount="indefinite"/>
+  </rect>
+  <defs>
     <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#7aa2f7"/>
       <stop offset="100%" stop-color="#7dcfff"/>
     </linearGradient>
+    <filter id="ringGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="2.5" flood-color="#7dcfff" flood-opacity="0.32"/>
+    </filter>
   </defs>
-  <g filter="url(#streakGlow)">
-    <rect width="860" height="168" rx="16" fill="#1a1b26" stroke="#3b4261" stroke-width="1.25"/>
-  </g>
-  <rect x="40" y="1" width="780" height="2" rx="1" fill="url(#streakEdge)">
-    <animate attributeName="opacity" values="0.3;0.9;0.3" dur="4.2s" begin="0s" repeatCount="indefinite"/>
-  </rect>
-  <text x="28" y="32" fill="#7aa2f7" font-size="15" font-weight="700" font-family="Verdana, Geneva, sans-serif">webywz · streak</text>
-  <text x="28" y="50" fill="#565f89" font-size="11" font-family="Verdana, Geneva, sans-serif">theme · tokyonight · local SVG</text>
+  <text x="22" y="28" fill="#7aa2f7" font-size="13" font-weight="700" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" letter-spacing="0.08em">STREAK</text>
+  <text x="86" y="28" fill="#565f89" font-size="13" font-weight="500" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">· 连续</text>
+  <text x="830" y="28" text-anchor="end" fill="#565f89" font-size="10" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" letter-spacing="0.08em">tokyo-night · webywz</text>
 
-  <g transform="translate(110, 98)">
-    <circle cx="0" cy="0" r="46" fill="none" stroke="#121526" stroke-width="8"/>
-    <circle cx="0" cy="0" r="46" fill="none" stroke="url(#ringGrad)" stroke-width="8"
-      stroke-linecap="round" stroke-dasharray="54 235" transform="rotate(-90)">
-      <animate attributeName="stroke-dasharray" values="54 235;68 221;54 235" dur="4.8s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.65;1;0.65" dur="4.8s" begin="0s" repeatCount="indefinite"/>
+  <g transform="translate(88, 90)" filter="url(#ringGlow)">
+    <circle cx="0" cy="0" r="34" fill="none" stroke="#12131c" stroke-width="6"/>
+    <circle cx="0" cy="0" r="34" fill="none" stroke="url(#ringGrad)" stroke-width="6"
+      stroke-linecap="round" stroke-dasharray="40 174" transform="rotate(-90)">
+      <animate attributeName="stroke-opacity" values="0.55;1;0.55" dur="4.8s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="0" cy="0" r="28" fill="#12131c" stroke="#7aa2f7" stroke-width="1" stroke-opacity="0.35">
-      <animate attributeName="opacity" values="0.5;0.95;0.5" dur="4.8s" begin="0s" repeatCount="indefinite"/>
-    </circle>
-    <text x="0" y="6" text-anchor="middle" fill="#7dcfff" font-size="22" font-weight="700" font-family="Verdana, Geneva, sans-serif">
-      1
-      <animate attributeName="opacity" values="0.75;1;0.75" dur="3.8s" begin="0s" repeatCount="indefinite"/>
-    </text>
+    <circle cx="0" cy="0" r="22" fill="#16161e" stroke="#7aa2f7" stroke-width="1" stroke-opacity="0.25"/>
+    <text x="0" y="5" text-anchor="middle" fill="#c0caf5" font-size="17" font-weight="600" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, Liberation Mono, monospace" letter-spacing="0.04em">1</text>
   </g>
 
-  <g font-family="Verdana, Geneva, sans-serif">
-    <text x="220" y="78" fill="#565f89" font-size="12">Current streak · 当前连续</text>
-    <text x="220" y="104" fill="#7dcfff" font-size="28" font-weight="700">
-      1
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="3.8s" begin="0s" repeatCount="indefinite"/>
-    </text>
-    <text x="220" y="126" fill="#565f89" font-size="11">days</text>
-
-    <text x="430" y="78" fill="#565f89" font-size="12">Longest · 最长</text>
-    <text x="430" y="104" fill="#7aa2f7" font-size="28" font-weight="700">
-      4
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="3.8s" begin="0.25s" repeatCount="indefinite"/>
-    </text>
-    <text x="430" y="126" fill="#565f89" font-size="11">days</text>
-
-    <text x="620" y="78" fill="#565f89" font-size="12">Total · 本年贡献</text>
-    <text x="620" y="104" fill="#9ece6a" font-size="28" font-weight="700">
-      196
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="3.8s" begin="0.45s" repeatCount="indefinite"/>
-    </text>
-    <text x="620" y="126" fill="#565f89" font-size="11">contributions</text>
+  <line x1="350" y1="48" x2="350" y2="128" stroke="#3b4261" stroke-opacity="0.4" stroke-width="1"/>
+  <line x1="572" y1="48" x2="572" y2="128" stroke="#3b4261" stroke-opacity="0.4" stroke-width="1"/>
+  <g>
+    <text x="198" y="60" fill="#565f89" font-size="11" font-weight="500" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">Current · 当前</text>
+    <text x="198" y="94" fill="#7dcfff" font-size="28" font-weight="600" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, Liberation Mono, monospace" letter-spacing="0.04em">1</text>
+    <text x="198" y="114" fill="#565f89" font-size="10" font-weight="500" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">days</text>
+    <rect x="198" y="122" width="40" height="2" rx="1" fill="#7dcfff" opacity="0.5">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="4.2s" begin="0.00s" repeatCount="indefinite"/>
+    </rect>
+    <text x="420" y="60" fill="#565f89" font-size="11" font-weight="500" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">Longest · 最长</text>
+    <text x="420" y="94" fill="#7aa2f7" font-size="28" font-weight="600" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, Liberation Mono, monospace" letter-spacing="0.04em">4</text>
+    <text x="420" y="114" fill="#565f89" font-size="10" font-weight="500" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">days</text>
+    <rect x="420" y="122" width="40" height="2" rx="1" fill="#7aa2f7" opacity="0.5">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="4.2s" begin="0.18s" repeatCount="indefinite"/>
+    </rect>
+    <text x="642" y="60" fill="#565f89" font-size="11" font-weight="500" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">Total · 本年</text>
+    <text x="642" y="94" fill="#c0caf5" font-size="28" font-weight="600" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, Liberation Mono, monospace" letter-spacing="0.04em">196</text>
+    <text x="642" y="114" fill="#565f89" font-size="10" font-weight="500" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">contribs</text>
+    <rect x="642" y="122" width="40" height="2" rx="1" fill="#c0caf5" opacity="0.5">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="4.2s" begin="0.36s" repeatCount="indefinite"/>
+    </rect>
   </g>
 </svg>
