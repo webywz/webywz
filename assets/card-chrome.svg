@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="420" height="14" viewBox="0 0 420 14" role="img" aria-label="breathing card chrome">
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="24" viewBox="0 0 420 24" role="img" aria-label="breathing card chrome">
   <defs>
     <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#7aa2f7" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#7dcfff" stop-opacity="0.9"/>
+      <stop offset="35%" stop-color="#7aa2f7" stop-opacity="0.9"/>
+      <stop offset="65%" stop-color="#7dcfff" stop-opacity="1"/>
       <stop offset="100%" stop-color="#7aa2f7" stop-opacity="0"/>
     </linearGradient>
+    <filter id="cardGlow" x="-3%" y="-30%" width="106%" height="160%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="2.5" flood-color="#7aa2f7" flood-opacity="0.22"/>
+    </filter>
   </defs>
-  <rect width="420" height="14" rx="7" fill="#16161e"/>
-  <rect x="8" y="5" width="404" height="4" rx="2" fill="#1f2335"/>
-  <rect x="8" y="5" width="404" height="4" rx="2" fill="url(#g)">
-    <animate attributeName="opacity" values="0.35;1;0.35" dur="3.8s" repeatCount="indefinite"/>
+  <g filter="url(#cardGlow)">
+    <rect x="1" y="1" width="418" height="22" rx="11" fill="#16161e" stroke="#3b4261" stroke-width="1.75"/>
+  </g>
+  <rect x="14" y="7" width="392" height="10" rx="5" fill="#1f2335"/>
+  <rect x="14" y="7" width="392" height="10" rx="5" fill="url(#g)">
+    <animate attributeName="opacity" values="0.45;1;0.45" dur="3.8s" repeatCount="indefinite"/>
   </rect>
-  <circle cx="24" cy="7" r="2.5" fill="#7aa2f7">
-    <animate attributeName="opacity" values="0.4;1;0.4" dur="3.8s" repeatCount="indefinite"/>
+  <circle cx="30" cy="12" r="3.25" fill="#7aa2f7">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="3.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="46" cy="12" r="3.25" fill="#7dcfff">
+    <animate attributeName="opacity" values="0.4;0.95;0.4" dur="3.8s" begin="0.35s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="62" cy="12" r="3.25" fill="#7aa2f7">
+    <animate attributeName="opacity" values="0.35;0.85;0.35" dur="3.8s" begin="0.7s" repeatCount="indefinite"/>
   </circle>
 </svg>
