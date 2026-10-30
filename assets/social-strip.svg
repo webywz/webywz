@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="52" viewBox="0 0 880 52" role="img" aria-label="GitHub webywz · aquarium · vibe-commit · diff-vibe">
+  <defs>
+    <linearGradient id="sg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7aa2f7" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#7aa2f7" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#7aa2f7" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="880" height="52" rx="12" fill="#12131c"/>
+  <rect x="0" y="0" width="880" height="1" fill="url(#sg)">
+    <animate attributeName="opacity" values="0.3;0.9;0.3" dur="5s" repeatCount="indefinite"/>
+  </rect>
+  <text x="440" y="32" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="13" fill="#a9b1d6" letter-spacing="1.5">github.com/webywz · aquarium · vibe-commit · diff-vibe</text>
+  <circle cx="120" cy="26" r="3" fill="#7aa2f7">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="760" cy="26" r="3" fill="#7dcfff">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="4s" begin="1s" repeatCount="indefinite"/>
+  </circle>
+</svg>
