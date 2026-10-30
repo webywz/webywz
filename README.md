@@ -218,8 +218,8 @@ Driven by [breathing-github-profile](https://github.com/webywz/breathing-github-
 
 <br/>
 
-Watch contributions swim in the [aquarium](https://github.com/webywz/contrib-aquarium). Commits with [vibe-commit](https://github.com/webywz/vibe-commit) (examples + pair-workflow); PRs with [diff-vibe](https://github.com/webywz/diff-vibe) (`--github` / Job Summary).
+Watch contributions swim in the [aquarium](https://github.com/webywz/contrib-aquarium). Commits with [vibe-commit](https://github.com/webywz/vibe-commit) (pair-workflow + CI `--github` / Job Summary); PRs with [diff-vibe](https://github.com/webywz/diff-vibe) (`--github` / Job Summary).
 
-有意思的话，去 [水族馆](https://github.com/webywz/contrib-aquarium) 看贡献游泳；commit 用 [vibe-commit](https://github.com/webywz/vibe-commit)（examples + pair-workflow），PR 用 [diff-vibe](https://github.com/webywz/diff-vibe)（`--github` / Job Summary）。
+有意思的话，去 [水族馆](https://github.com/webywz/contrib-aquarium) 看贡献游泳；commit 用 [vibe-commit](https://github.com/webywz/vibe-commit)（pair-workflow + CI `--github` / Job Summary），PR 用 [diff-vibe](https://github.com/webywz/diff-vibe)（`--github` / Job Summary）。
 
 </div>
