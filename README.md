@@ -79,6 +79,22 @@ One outcome per cell. Copy the command and go. Each card is a clinical SVG tile 
 
 </td>
 </tr>
+<tr>
+<td width="50%" align="center" valign="top">
+
+<a href="https://github.com/webywz/llm-roast">
+<img src="assets/product-llm-roast.svg" width="420" height="208" alt="llm-roast" />
+</a>
+
+</td>
+<td width="50%" align="center" valign="top">
+
+<a href="https://github.com/webywz/prompt-diff">
+<img src="assets/product-prompt-diff.svg" width="420" height="208" alt="prompt-diff" />
+</a>
+
+</td>
+</tr>
 </table>
 
 ## Contribution aquarium · 贡献水族箱

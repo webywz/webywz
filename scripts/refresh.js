@@ -121,6 +121,22 @@ export const PRODUCT_WALL = [
     en: ['Slim LLM context before you send it.'],
     zh: ['发之前先给上下文瘦身，估算 token。'],
     cmd: 'npx @webywz/context-diet'
+  },
+  {
+    name: 'llm-roast',
+    tag: 'CLI',
+    href: 'https://github.com/webywz/llm-roast',
+    en: ['Roast prompts & answers — fluff, hallucination, score.'],
+    zh: ['烤烤 prompt / 回答：废话、幻觉感、过度自信分。'],
+    cmd: 'npx @webywz/llm-roast'
+  },
+  {
+    name: 'prompt-diff',
+    tag: 'CLI',
+    href: 'https://github.com/webywz/prompt-diff',
+    en: ['Diff two prompts like code — intent, tokens, risk.'],
+    zh: ['像 diff 代码一样对比两段 prompt：意图与风险。'],
+    cmd: 'npx @webywz/prompt-diff'
   }
 ];
 
