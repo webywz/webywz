@@ -519,7 +519,7 @@ function testWorkflowIntact() {
   assert(workflow.includes('npm run refresh'), '仍调用 refresh 脚本');
   assert(workflow.includes('contents: write'), '仍有写权限');
   assert(
-    workflow.includes('webywz/contrib-aquarium@v0.1.2'),
+    workflow.includes('webywz/contrib-aquarium@v0.1.3'),
     '使用 contrib-aquarium 官方 Action 重画鱼缸'
   );
   assert(workflow.includes('width: "860"') || workflow.includes("width: '860'"), 'Action 传入展示宽 860');
