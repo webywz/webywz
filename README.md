@@ -1,14 +1,14 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="Noah · webywz · A breathing workspace" width="880" height="208" />
+<img src="assets/banner.svg" alt="Noah · webywz · contributions that breathe" width="880" height="208" />
 
 **Turn contributions into something that breathes.**  
 **把贡献变成会呼吸的东西。**
 
-[![typing](https://readme-typing-svg.demolab.com?font=IBM+Plex+Mono&weight=600&size=20&duration=3400&pause=1200&color=7DCFFF&center=true&vCenter=true&width=680&lines=%E7%94%A8+AI+%E5%92%8C%E5%B7%A5%E7%A8%8B%E6%8A%8A%E6%83%B3%E6%B3%95%E5%81%9A%E6%88%90%E4%BA%A7%E5%93%81;FastAPI+%C2%B7+Nest+%C2%B7+%E4%BC%9A%E5%91%BC%E5%90%B8%E7%9A%84%E5%B7%A5%E5%85%B7;%E8%B4%A1%E7%8C%AE%E5%9B%BE%E4%BC%9A%E6%B8%B8%E6%B3%B3%EF%BC%8Ccommit+%E4%B9%9F%E8%A6%81%E6%9C%89%E5%93%81%E5%91%B3)](https://github.com/webywz)
+<img src="assets/terminal-flex.svg" alt="npx contrib-aquarium" width="720" height="46" />
 
 [![GitHub followers](https://img.shields.io/github/followers/webywz?style=flat-square&logo=github&color=7aa2f7&labelColor=1a1b26)](https://github.com/webywz)
-[![Profile Views](https://komarev.com/ghpvc/?username=webywz&style=flat-square&color=bb9af7&label=profile+views)](https://github.com/webywz)
+[![Profile Views](https://komarev.com/ghpvc/?username=webywz&style=flat-square&color=7aa2f7&label=profile+views)](https://github.com/webywz)
 
 `TypeScript` · `Python` · `NestJS` · `FastAPI` · `Vue` · `Electron` · `AI Workflows`
 
@@ -32,7 +32,11 @@ This tank is redrawn daily by [contrib-aquarium](https://github.com/webywz/contr
   </a>
 </p>
 
-## ✨ 亮点 Demo · Spotlight
+## ✨ 亮点 Demo · 产品墙 / Product wall
+
+One outcome per cell. Copy the command and go.
+
+一格一件事。复制命令就能跑。
 
 <table>
 <tr>
@@ -44,6 +48,10 @@ A year of commits, rendered as a living SVG aquarium. The tank above is what it 
 
 一年的 commit 变成一座会呼吸的 SVG 水族馆。上面那座缸就是它每天给这份主页画的。
 
+```bash
+npx contrib-aquarium
+```
+
 </td>
 <td width="50%" valign="top">
 
@@ -52,6 +60,38 @@ A year of commits, rendered as a living SVG aquarium. The tank above is what it 
 One command for a conventional commit with taste. Messages can have character too.
 
 一条命令，写出有品味的 conventional commit。提交信息也可以有性格。
+
+```bash
+npx @webywz/vibe-commit
+```
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### [agent-trace](https://github.com/webywz/agent-trace)
+
+Messy agent run logs become a readable timeline — filter, stats, Markdown & Mermaid.
+
+杂乱的 agent 运行日志变成可读时间线：过滤、统计、Markdown / Mermaid。
+
+```bash
+npx @webywz/agent-trace
+```
+
+</td>
+<td width="50%" valign="top">
+
+### [eval-smoke](https://github.com/webywz/eval-smoke)
+
+One-minute smoke evals for prompts and models — matchers, diffs, JUnit.
+
+一分钟跑通 prompt / 模型冒烟评测：匹配器、diff、JUnit。
+
+```bash
+npx @webywz/eval-smoke
+```
 
 </td>
 </tr>
@@ -64,20 +104,32 @@ A git diff becomes a paste-ready PR title and body. Offline heuristic first; AI 
 
 git diff 直接变成可贴的 PR title 和 body。离线启发式先出草稿，有 Key 再可选 AI。
 
+```bash
+npx @webywz/diff-vibe
+```
+
 </td>
 <td width="50%" valign="top">
 
-### [prompt-diff](https://github.com/webywz/prompt-diff)
+### [context-diet](https://github.com/webywz/context-diet)
 
-Diff two LLM prompts like code: intent drift, tokens, regression risk. Glance before you ship.
+Slim LLM context before you send it — drop noise, keep the signal, estimate tokens.
 
-像 diff 代码一样对比两份 LLM prompt：意图漂移、token、回归风险分。改完先看一眼。
+发之前先给上下文瘦身：丢掉噪声，留下信号，估算 token。
+
+```bash
+npx @webywz/context-diet
+```
 
 </td>
 </tr>
 </table>
 
-## Featured · 精选项目
+## Also shipping · 更多项目
+
+Auto-refreshed showcase cards. Hand-written copy above stays untouched.
+
+每日自动刷新的项目卡。上面的手写文案不会被覆盖。
 
 <!--PROJECTS:START-->
 <table>

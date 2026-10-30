@@ -331,7 +331,9 @@ export function getShanghaiTime(date = new Date()) {
   }).formatToParts(date);
 
   const get = (type) => parts.find((part) => part.type === type)?.value || '00';
-  return `${get('year')}-${get('month')}-${get('day')} ${get('hour')}:${get('minute')}:${get('second')}`;
+  // Some ICU builds emit hour "24" for midnight; normalize to 00.
+  const hour = get('hour') === '24' ? '00' : get('hour');
+  return `${get('year')}-${get('month')}-${get('day')} ${hour}:${get('minute')}:${get('second')}`;
 }
 
 function replaceMarker(source, name, inner) {
