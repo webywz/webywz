@@ -17,7 +17,8 @@
     <animate attributeName="opacity" values="0.35;0.85;0.35" dur="4.2s" begin="0s" repeatCount="indefinite"/>
   </rect>
   <text x="22" y="34" fill="#c0caf5" font-size="15" font-weight="700" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">vibe-commit</text>
-  <text x="22" y="58" fill="#a9b1d6" font-size="12" font-weight="500" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">一条命令写出有品味的 conventional commit</text>
+  <text x="22" y="58" fill="#a9b1d6" font-size="12" font-weight="500" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">有品味的 conventional commit；examples 含</text>
+  <text x="22" y="75" fill="#a9b1d6" font-size="12" font-weight="500" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">pair-workflow</text>
   <rect x="22" y="116" width="86" height="20" rx="10" fill="#16161e" stroke="#3b4261" stroke-width="1"/>
   <text x="65" y="130" text-anchor="middle" fill="#7dcfff" font-size="10" font-weight="600" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, Liberation Mono, monospace">TypeScript</text>
   <text x="122" y="130" fill="#c0caf5" font-size="12" font-weight="600" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, Liberation Mono, monospace">★ 0</text>
