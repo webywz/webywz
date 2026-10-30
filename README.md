@@ -103,9 +103,9 @@ One outcome per cell. Copy the command and go. Each card is a clinical SVG tile 
   <img src="assets/mid-breath.svg" alt="Mid breath · aquarium" width="880" height="40" />
 </p>
 
-Second breath layer — quieter than the hero. This tank is redrawn daily by [contrib-aquarium](https://github.com/webywz/contrib-aquarium) (`@v0.1.3`) from my GitHub contribution calendar: commits become schools of fish, streaks grow kelp, recent activity lifts bubbles. Display width (`860`) is written into the SVG by the Action (`width` input); the README `<img>` matches that size.
+Second breath layer — quieter than the hero. This tank is redrawn daily by [contrib-aquarium](https://github.com/webywz/contrib-aquarium) (`@v0.1.4`) from my GitHub contribution calendar: commits become schools of fish, streaks grow kelp, recent activity lifts bubbles. Display width (`860`) is written into the SVG by the Action (`width` input); the README `<img>` matches that size.
 
-第二层呼吸，比 Hero 更克制。这座缸由 [contrib-aquarium](https://github.com/webywz/contrib-aquarium)（钉版 `@v0.1.3`）根据我的 GitHub 贡献日历每天重画：提交变成鱼群，连续打卡撑起海藻，近两周活跃则冒出气泡。展示宽（`860`）由 Action 的 `width` 写入 SVG，与 README 里的 `<img width="860">` 对齐。
+第二层呼吸，比 Hero 更克制。这座缸由 [contrib-aquarium](https://github.com/webywz/contrib-aquarium)（钉版 `@v0.1.4`）根据我的 GitHub 贡献日历每天重画：提交变成鱼群，连续打卡撑起海藻，近两周活跃则冒出气泡。展示宽（`860`）由 Action 的 `width` 写入 SVG，与 README 里的 `<img width="860">` 对齐。
 
 <p align="center">
   <a href="https://github.com/webywz/contrib-aquarium">
@@ -202,9 +202,9 @@ Auto-refreshed showcase cards. Hand-written copy above stays untouched.
 
 ## This profile breathes · 这个主页自己会呼吸
 
-Driven by [breathing-github-profile](https://github.com/webywz/breathing-github-profile): marker-guarded sections refresh project cards and stats daily. The same daily-refresh job calls [contrib-aquarium](https://github.com/webywz/contrib-aquarium) `@v0.1.3` to redraw `assets/aquarium.svg`. Hand-written copy outside the markers is never overwritten.
+Driven by [breathing-github-profile](https://github.com/webywz/breathing-github-profile): marker-guarded sections refresh project cards and stats daily. The same daily-refresh job calls [contrib-aquarium](https://github.com/webywz/contrib-aquarium) `@v0.1.4` to redraw `assets/aquarium.svg`. Hand-written copy outside the markers is never overwritten.
 
-这份 README 由 [breathing-github-profile](https://github.com/webywz/breathing-github-profile) 驱动：标记保护区每天刷新项目卡和统计；同一条 daily-refresh 还会调用 [contrib-aquarium](https://github.com/webywz/contrib-aquarium) `@v0.1.3` 重画 `assets/aquarium.svg`。手写的句子不会被覆盖。
+这份 README 由 [breathing-github-profile](https://github.com/webywz/breathing-github-profile) 驱动：标记保护区每天刷新项目卡和统计；同一条 daily-refresh 还会调用 [contrib-aquarium](https://github.com/webywz/contrib-aquarium) `@v0.1.4` 重画 `assets/aquarium.svg`。手写的句子不会被覆盖。
 
 <!--TIMESTAMP:START-->
 *最后更新：2026-10-30 10:56:07 (Asia/Shanghai)*
