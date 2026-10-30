@@ -127,16 +127,16 @@ export const PRODUCT_WALL = [
     name: 'llm-roast',
     tag: 'CLI',
     href: 'https://github.com/webywz/llm-roast',
-    en: ['Roast prompts & answers — fluff, hallucination, score.'],
-    zh: ['烤烤 prompt / 回答：废话、幻觉感、过度自信分。'],
+    en: ['Roast prompts & answers; CI --github + Job Summary.'],
+    zh: ['烤烤 prompt / 回答；CI --github 与 Job Summary。'],
     cmd: 'npx @webywz/llm-roast'
   },
   {
     name: 'prompt-diff',
     tag: 'CLI',
     href: 'https://github.com/webywz/prompt-diff',
-    en: ['Diff two prompts like code — intent, tokens, risk.'],
-    zh: ['像 diff 代码一样对比两段 prompt：意图与风险。'],
+    en: ['Diff prompts like code; CI --github + Job Summary.'],
+    zh: ['像 diff 代码一样比 prompt；CI --github 与 Job Summary。'],
     cmd: 'npx @webywz/prompt-diff'
   }
 ];
