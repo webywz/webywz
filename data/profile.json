@@ -11,17 +11,6 @@
   },
   "repos": [
     {
-      "name": "breathing-github-profile",
-      "fullName": "webywz/breathing-github-profile",
-      "description": "Open-source living GitHub profile README generator with daily refresh + tests",
-      "htmlUrl": "https://github.com/webywz/breathing-github-profile",
-      "stars": 0,
-      "forks": 0,
-      "language": "TypeScript",
-      "updatedAt": "2026-10-30T20:20:05Z",
-      "createdAt": "2026-10-29T07:38:56Z"
-    },
-    {
       "name": "contrib-aquarium",
       "fullName": "webywz/contrib-aquarium",
       "description": "Living SVG aquarium driven by your GitHub contribution graph — drop it in your README",
@@ -29,8 +18,30 @@
       "stars": 0,
       "forks": 0,
       "language": "TypeScript",
-      "updatedAt": "2026-10-30T20:13:16Z",
+      "updatedAt": "2026-10-31T10:27:51Z",
       "createdAt": "2026-10-29T10:50:29Z"
+    },
+    {
+      "name": "breathing-github-profile",
+      "fullName": "webywz/breathing-github-profile",
+      "description": "Open-source living GitHub profile README generator with daily refresh + tests",
+      "htmlUrl": "https://github.com/webywz/breathing-github-profile",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "updatedAt": "2026-10-31T01:51:26Z",
+      "createdAt": "2026-10-29T07:38:56Z"
+    },
+    {
+      "name": "prompt-diff",
+      "fullName": "webywz/prompt-diff",
+      "description": "Diff two LLM prompts like code — side-by-side intent, tokens, and regression risk for AI apps",
+      "htmlUrl": "https://github.com/webywz/prompt-diff",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "updatedAt": "2026-10-31T01:34:22Z",
+      "createdAt": "2026-10-29T12:22:55Z"
     },
     {
       "name": "diff-vibe",
@@ -40,7 +51,7 @@
       "stars": 0,
       "forks": 0,
       "language": "TypeScript",
-      "updatedAt": "2026-10-30T19:43:57Z",
+      "updatedAt": "2026-10-31T01:22:41Z",
       "createdAt": "2026-10-29T12:19:46Z"
     },
     {
@@ -51,7 +62,7 @@
       "stars": 0,
       "forks": 0,
       "language": "TypeScript",
-      "updatedAt": "2026-10-30T19:26:24Z",
+      "updatedAt": "2026-10-31T01:10:05Z",
       "createdAt": "2026-10-29T10:50:49Z"
     },
     {
@@ -62,19 +73,8 @@
       "stars": 0,
       "forks": 0,
       "language": "TypeScript",
-      "updatedAt": "2026-10-30T17:15:32Z",
+      "updatedAt": "2026-10-31T00:56:31Z",
       "createdAt": "2026-10-29T12:24:45Z"
-    },
-    {
-      "name": "prompt-diff",
-      "fullName": "webywz/prompt-diff",
-      "description": "Diff two LLM prompts like code — side-by-side intent, tokens, and regression risk for AI apps",
-      "htmlUrl": "https://github.com/webywz/prompt-diff",
-      "stars": 0,
-      "forks": 0,
-      "language": "TypeScript",
-      "updatedAt": "2026-10-30T16:08:47Z",
-      "createdAt": "2026-10-29T12:22:55Z"
     },
     {
       "name": "webywz",
@@ -84,7 +84,7 @@
       "stars": 0,
       "forks": 0,
       "language": "JavaScript",
-      "updatedAt": "2026-10-30T12:19:25Z",
+      "updatedAt": "2026-10-31T00:48:58Z",
       "createdAt": "2026-10-29T07:38:04Z"
     },
     {
@@ -232,9 +232,9 @@
     }
   ],
   "streak": {
-    "current": 2,
-    "longest": 2,
-    "total": 527
+    "current": 3,
+    "longest": 3,
+    "total": 568
   },
-  "fetchedAt": "2026-10-30T20:29:22.287Z"
+  "fetchedAt": "2026-10-31T19:45:37.380Z"
 }
