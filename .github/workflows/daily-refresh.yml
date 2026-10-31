@@ -36,10 +36,10 @@ jobs:
       # 使用 contrib-aquarium 官方 composite Action。
       # GraphQL 贡献日历需要 token：这里用 Actions 自动注入的 GITHUB_TOKEN，
       # 无需额外 secrets；拿不到日历时 Action 会回退到公开 Events / mock，鱼缸不会空白。
-      # Pin to contrib-aquarium@v0.1.5 (version-synced CLI, --quiet, examples).
+      # Pin to contrib-aquarium@v0.1.11 (version-synced CLI, --quiet, examples).
       # width 860 matches README <img width="860">; omit height → proportional 300.
       - name: 🐠 Generate contribution aquarium
-        uses: webywz/contrib-aquarium@v0.1.5
+        uses: webywz/contrib-aquarium@v0.1.11
         with:
           user: webywz
           out: assets/aquarium.svg
