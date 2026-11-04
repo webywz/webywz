@@ -18,8 +18,52 @@
       "stars": 0,
       "forks": 0,
       "language": "TypeScript",
-      "updatedAt": "2026-11-03T14:46:37Z",
+      "updatedAt": "2026-11-04T12:16:35Z",
       "createdAt": "2026-10-29T10:50:29Z"
+    },
+    {
+      "name": "eval-smoke",
+      "fullName": "webywz/eval-smoke",
+      "description": "One-minute smoke evals for prompts and models — catch regressions before they ship",
+      "htmlUrl": "https://github.com/webywz/eval-smoke",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "updatedAt": "2026-11-04T03:03:31Z",
+      "createdAt": "2026-10-29T12:41:15Z"
+    },
+    {
+      "name": "agent-trace",
+      "fullName": "webywz/agent-trace",
+      "description": "Turn messy agent runs into a readable timeline — tools, thoughts, and where it went sideways",
+      "htmlUrl": "https://github.com/webywz/agent-trace",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "updatedAt": "2026-11-04T03:03:23Z",
+      "createdAt": "2026-10-29T12:40:57Z"
+    },
+    {
+      "name": "context-diet",
+      "fullName": "webywz/context-diet",
+      "description": "Slim down LLM context — drop noise, keep the signal, estimate tokens before you pay for them",
+      "htmlUrl": "https://github.com/webywz/context-diet",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "updatedAt": "2026-11-04T03:00:05Z",
+      "createdAt": "2026-10-29T12:40:39Z"
+    },
+    {
+      "name": "webywz",
+      "fullName": "webywz/webywz",
+      "description": "",
+      "htmlUrl": "https://github.com/webywz/webywz",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "updatedAt": "2026-11-03T21:34:52Z",
+      "createdAt": "2026-10-29T07:38:04Z"
     },
     {
       "name": "breathing-github-profile",
@@ -77,17 +121,6 @@
       "createdAt": "2026-10-29T12:24:45Z"
     },
     {
-      "name": "webywz",
-      "fullName": "webywz/webywz",
-      "description": "",
-      "htmlUrl": "https://github.com/webywz/webywz",
-      "stars": 0,
-      "forks": 0,
-      "language": "JavaScript",
-      "updatedAt": "2026-11-03T13:13:00Z",
-      "createdAt": "2026-10-29T07:38:04Z"
-    },
-    {
       "name": "learn-fastapi",
       "fullName": "webywz/learn-fastapi",
       "description": "",
@@ -97,39 +130,6 @@
       "language": "Python",
       "updatedAt": "2026-11-03T11:20:29Z",
       "createdAt": "2025-12-25T09:10:10Z"
-    },
-    {
-      "name": "agent-trace",
-      "fullName": "webywz/agent-trace",
-      "description": "Turn messy agent runs into a readable timeline — tools, thoughts, and where it went sideways",
-      "htmlUrl": "https://github.com/webywz/agent-trace",
-      "stars": 0,
-      "forks": 0,
-      "language": "TypeScript",
-      "updatedAt": "2026-11-03T10:28:32Z",
-      "createdAt": "2026-10-29T12:40:57Z"
-    },
-    {
-      "name": "context-diet",
-      "fullName": "webywz/context-diet",
-      "description": "Slim down LLM context — drop noise, keep the signal, estimate tokens before you pay for them",
-      "htmlUrl": "https://github.com/webywz/context-diet",
-      "stars": 0,
-      "forks": 0,
-      "language": "TypeScript",
-      "updatedAt": "2026-11-03T10:28:14Z",
-      "createdAt": "2026-10-29T12:40:39Z"
-    },
-    {
-      "name": "eval-smoke",
-      "fullName": "webywz/eval-smoke",
-      "description": "One-minute smoke evals for prompts and models — catch regressions before they ship",
-      "htmlUrl": "https://github.com/webywz/eval-smoke",
-      "stars": 0,
-      "forks": 0,
-      "language": "TypeScript",
-      "updatedAt": "2026-11-03T10:27:58Z",
-      "createdAt": "2026-10-29T12:41:15Z"
     },
     {
       "name": "taobao-shop",
@@ -232,9 +232,9 @@
     }
   ],
   "streak": {
-    "current": 1,
+    "current": 2,
     "longest": 4,
-    "total": 620
+    "total": 627
   },
-  "fetchedAt": "2026-11-03T21:34:16.518Z"
+  "fetchedAt": "2026-11-04T21:44:19.137Z"
 }
