@@ -18,7 +18,7 @@
       "stars": 0,
       "forks": 0,
       "language": "TypeScript",
-      "updatedAt": "2026-11-07T11:10:29Z",
+      "updatedAt": "2026-11-08T11:22:50Z",
       "createdAt": "2026-10-29T10:50:29Z"
     },
     {
@@ -29,7 +29,7 @@
       "stars": 0,
       "forks": 0,
       "language": "JavaScript",
-      "updatedAt": "2026-11-06T21:21:57Z",
+      "updatedAt": "2026-11-07T19:57:53Z",
       "createdAt": "2026-10-29T07:38:04Z"
     },
     {
@@ -49,7 +49,7 @@
       "description": "Turn messy agent runs into a readable timeline — tools, thoughts, and where it went sideways",
       "htmlUrl": "https://github.com/webywz/agent-trace",
       "stars": 0,
-      "forks": 0,
+      "forks": 1,
       "language": "TypeScript",
       "updatedAt": "2026-11-04T03:03:23Z",
       "createdAt": "2026-10-29T12:40:57Z"
@@ -236,5 +236,5 @@
     "longest": 4,
     "total": 627
   },
-  "fetchedAt": "2026-11-07T19:57:20.896Z"
+  "fetchedAt": "2026-11-08T20:15:17.520Z"
 }
