@@ -232,9 +232,9 @@
     }
   ],
   "streak": {
-    "current": 1,
+    "current": 0,
     "longest": 4,
-    "total": 628
+    "total": 629
   },
-  "fetchedAt": "2026-11-15T20:52:24.247Z"
+  "fetchedAt": "2026-11-17T00:00:23.318Z"
 }
